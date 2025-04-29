@@ -96,6 +96,7 @@ include("../function_folder/common_function.php");
         $user_pic = $_FILES["user_picture"]["name"];
         $user_pic_tmp = $_FILES["user_picture"]["tmp_name"];
         $user_unique_id = mt_rand();
+        $online = "online";
 
     $errors = [];
     
@@ -178,13 +179,14 @@ include("../function_folder/common_function.php");
 
     if(empty($errors)) {
         move_uploaded_file($user_pic_tmp, "./user_image/$user_pic");
-        $insert_query = "insert into `secret_users` (username, user_email, password, age, location, user_picture, user_unique_id, date)
-        values ('$username', '$user_email', '$hashed_pwd', '$age', '$user_location', '$user_pic', $user_unique_id, NOW())";
+        $insert_query = "insert into `secret_users` (username, user_email, password, age, location, user_picture, user_unique_id, user_online, date)
+        values ('$username', '$user_email', '$hashed_pwd', '$age', '$user_location', '$user_pic', $user_unique_id, '$online', NOW())";
         $result_query = mysqli_query($con, $insert_query);
         if($result_query) {
             $_SESSION["username"] = $username;
             $_SESSION["user_unique_id"] = $user_unique_id;
             $_SESSION["user_bio"] = "Add Some details to let friends know about you better..";
+            $_SESSION["email"] = $user_email;
             echo "<script>alert('Successful joined SecretBook!!!')</script>";
             echo "<script>window.open('../user_profile_folder/user_profile.php', '_self')</script>";
         } else {
