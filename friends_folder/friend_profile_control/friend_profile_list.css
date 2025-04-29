@@ -1,0 +1,223 @@
+.friend-container-div {
+    width: 1000px;
+    height: 100%;
+    border-radius: 12px;
+    background-color: lightgrey;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 13px;
+}
+
+.friend-container-nav-div {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.friend-container-nav-div > p {
+    font-size: 17px;
+    font-family: kode mono, sans-serif;
+    margin-left: 10px;
+}
+
+.search-friend-input {
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline-color: blue;
+    border-radius: 20px;
+    background-color: lightgray;
+    font-size: 14px;
+    font-family: kode mono, sans-serif;
+    padding-left: 40px;
+    padding-right: 10px;
+    background-image: url('searching.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.friend-container-div-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.friend-container-flex-1, .friend-container-flex-2 {
+    width: 50%;
+    height: 100%;
+    margin-top: 5px;
+
+}
+
+.friend-container-profile-div, .friend-container-profile-div-1 {
+    width: 450px;
+    height: 100px;
+    border: 2px solid whitesmoke;
+    border-radius: 12px;
+    margin-left: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.friend-container-profile-pic > p, .friend-container-profile-pic-1 {
+    font-size: 14px;
+    font-family: kode mono, sans-serif;
+    font-weight: 400;
+}
+
+.friend-profile-pic-div {
+    width: 95px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: dimgray;
+    margin-top: 10px;
+}
+
+.friend-profile-pic-div > img {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    object-position: center;
+}
+
+.add-friend-btn {
+    width: 105px;
+    height: 35px;
+    background-color: rgba(0, 0, 255, 0.6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: pacifico, sans-serif;
+    cursor: pointer;
+}
+
+.already-friend-btn, .cancel-friend-btn {
+    width: 105px;
+    height: 35px;
+    background-color: white;
+    color: dimgray;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: pacifico, sans-serif;
+}
+
+.specification-p {
+    font-size: 15px;
+    font-family: kode mono, sans-serif;
+    font-weight: 600;
+    margin-left: 15px;
+    color: blue;
+}
+
+/* Media query start here */
+
+@media only screen and (max-width: 319px) {
+    .friend-container-div {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .friend-container-div {
+        display: block;
+        width: 315px;
+    }
+
+    .search-friend-input {
+        width: 120px;
+    }
+    
+    .friend-container-div-1 {
+        flex-direction: column;
+    }
+    
+    .friend-container-flex-1, .friend-container-flex-2 {
+        width: 100%;
+    }
+    
+    .friend-container-profile-div, .friend-container-profile-div-1 {
+        width: 270px;
+    }
+    
+}
+
+@media only screen and (min-width: 375px) {
+    .friend-container-div {
+        width: 355px;
+    }
+
+    .search-friend-input {
+        width: 150px;
+    }
+    
+    .friend-container-profile-div, .friend-container-profile-div-1 {
+        width: 310px;
+    }
+
+}
+
+@media only screen and (min-width: 425px) {
+    .friend-container-div {
+        width: 400px;
+    }
+
+    .search-friend-input {
+        width: 190px;
+    }
+
+    .friend-container-profile-div, .friend-container-profile-div-1 {
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .friend-container-div {
+        width: 730px;
+    }
+
+    .search-friend-input {
+        width: 300px;
+    }
+
+    .friend-container-profile-div, .friend-container-profile-div-1 {
+        width: 680px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .friend-container-div {
+        width: 700px;
+    }
+    
+    .friend-container-div-1 {
+        flex-direction: column;
+    }
+    
+    .friend-container-flex-1, .friend-container-flex-2 {
+        width: 100%;
+    }
+    
+    .friend-container-profile-div, .friend-container-profile-div-1 {
+        width: 95%;
+    }
+    
+}
+
+@media only screen and (min-width: 1650px) {
+    .friend-container-div {
+        display: none;
+    }
+}
