@@ -60,23 +60,6 @@ function ajaxCallRequest_2(url) {
       })
 }
 
-  // function ajaxCallRequest_2(url) {
-  //     $(".coming-message").click(function() {
-  //         var user_id = $(this).data("user-comment");
-  //         $.post(url, { user_comment: user_id }, function(data) {
-  //             console.log("data good");
-  //           }, "json");
-  //       });
-  //   }
-
-    // function ajaxCallRequest_3() {
-    //     $(".post-like-i").click(function() {
-    //       var user_id = $(this).data("user-id");
-    //       var user_element = $(this).parent().find("sup").addClass("reaction_sup");
-    //       user_element.load("user_profile_like.php", {user_profile_like: user_id })  
-    //     });
-    // }
-
     function ajaxCallRequest_3() {
         $(".post-like-i").click(function() {
           var user_id = $(this).data("user-id");
@@ -186,6 +169,42 @@ function ajaxCallRequest_2(url) {
         });
     }
 
+    function searchFunction() {
+      $(".search-input-div").keyup(function() {
+        var search_value = $("input:text").val();
+        $(".search-result-div").load("search_file.php", {search_result: search_value});
+      });
+    }
+
+    function deleteRecentSearch1() {
+      $(".remove-recent-x").click(function() {
+        var search_id = $(this).data("recent-id");
+        var search_user_id = $(this).data("recent-user-id");
+        var search_username_1 = $(this).data("recent-username");
+        $.post("../function_folder/common_function_1.php", {search_id_1: search_id, search_user_id_1: search_user_id, search_username_2: search_username_1}, function() {
+          console.log("secretBook is good");
+        });
+        $(this).fadeOut("slow");
+      });
+    }
+
+    function searchData_3() {
+      $(".search-text-div-1").click(function() {
+        var user_name = $(this).data("username");
+        var user_id_1 = $(this).data("search-value-1");
+
+        $.post("../function_folder/common_function_1.php", {all_friend_id: user_id_1, all_friend_username: user_name}, function() {
+          window.open("../friend_profile_folder/friend_profile1.php", "_self");
+        });
+      });
+    }
+
+    function showMessage() {
+      $(".nav-message-btn").click(function() {
+        $(".message-users-div").load("./../message-profile.php");
+      });
+    }
+
     ajaxCallRequest();
     ajaxCallRequest_1("../function_folder/common_function_2.php");
     ajaxCallRequest_2("../function_folder/common_function_2.php");
@@ -200,6 +219,10 @@ function ajaxCallRequest_2(url) {
     ajaxCallFunction12();
     deleteHomeStory("./profile_data_control/profile_delete.php");
     deleteHomePost("./profile_data_control/profile_delete.php");
+    searchFunction();
+    deleteRecentSearch1();
+    searchData_3();
+    showMessage();
  });
 
 </script>
@@ -207,23 +230,23 @@ function ajaxCallRequest_2(url) {
 
 <?php
 
-// try {
+try {
 
 
 
-if(isset($_POST["bio-input"])) {
+if (isset($_POST["bio-input"])) {
     $bio_text =  htmlspecialchars($_POST["bio-input"]);
     $username = $_SESSION["username"];
 
-    if(empty($bio_text)) {
+    if (empty($bio_text)) {
         echo "<script>alert('Something Went Wrong')</script>";
     } else {
-        
+
         $insert_query = ("insert into `secret_users_bio` (user_unique_id, username, user_bio) values ($user_unique_id, '$username', 'Add bio so friends can get to know you better...')");
         $result_query_1 = mysqli_query($con, $insert_query);
         $update_query = "update `secret_users_bio` set user_unique_id = $user_unique_id, username = '$username', user_bio = '$bio_text' where user_unique_id = $user_unique_id";
         $result_query_2 = mysqli_query($con, $update_query);
-        if($result_query_2) {
+        if ($result_query_2) {
             echo "<script>alert('Bio Updated Successfully..!!')</script>";
             $_SESSION["user_bio"] = $bio_text;
             echo "<script>window.open('user_profile.php', '_self')</script>";
@@ -233,14 +256,14 @@ if(isset($_POST["bio-input"])) {
     }
 }
 
- 
-if(isset($_POST["add-story-btn"])) {
+
+if (isset($_POST["add-story-btn"])) {
     $post_pics = $_FILES["add-story-pics"]["name"];
     $tmp_post_pics = $_FILES["add-story-pics"]["tmp_name"];
     $post_caption = htmlspecialchars($_POST["add-story-caption"]);
     $post_unique_id = rand();
     $post_type_1 = "main-post";
-    if(empty($post_pics) || empty($post_caption)) {
+    if (empty($post_pics) || empty($post_caption)) {
         echo "<script>alert('Please fill the field.')</script>";
     } else {
         $username = $_SESSION["username"];
@@ -249,7 +272,7 @@ if(isset($_POST["add-story-btn"])) {
         $result_query_3 = $con->prepare($insert_query_1);
         $result_query_3->bind_param("sissi", $username, $user_unique_id, $post_pics, $post_caption, $post_unique_id);
         $result_query_3->execute();
-        if($result_query_3) {
+        if ($result_query_3) {
             move_uploaded_file($tmp_post_pics, "./user_post_img/$post_pics");
             echo "<script>alert('Stories successfully uploaded')</script>";
 
@@ -258,49 +281,65 @@ if(isset($_POST["add-story-btn"])) {
             $insert_stmt_1->bind_param("isssis", $user_unique_id, $username, $post_caption, $post_type_1, $post_unique_id, $post_pics);
             $insert_stmt_1->execute();
 
+            $notification_type = "new post";
+            $insert_notification = ("insert into `friend_notification_table` (user_unique_id, username, notification_type, notification_date) values (?, ?, ?, NOW())");
+            $notification_result = $con->prepare($insert_notification);
+            $notification_result->bind_param("iss", $user_unique_id, $username, $notification_type);
+            $notification_result->execute();
+
+            
             echo "<script>window.open('user_profile.php', '_self')</script>";
+
         } else {
             // echo "<script>alert('Sorry something went wrong..!!')</script>";
-            throw new Exception("Error Processing Request");         
+            throw new Exception("Error Processing Request");
         }
     }
 }
 
-if(isset($_POST["modal-9-submit"])) {
+if (isset($_POST["modal-9-submit"])) {
 
     $story_input = $_POST["modal-9-input"];
-    if(isset($_SESSION["profile_story_color"])) {
-      $user_color = $_SESSION["profile_story_color"];
+    if (isset($_SESSION["profile_story_color"])) {
+        $user_color = $_SESSION["profile_story_color"];
     } else {
-      $user_color = "nothing";
+        $user_color = "nothing";
     }
-  
-    if(!empty($story_input)) {
-      $post_type = "story-post";
-      $story_unique_id = rand();
-      $username = $_SESSION["username"];
-      $insert_story = ("insert into `profile_story` (username, user_unique_id, user_story, user_color, user_story_like, story_unique_id, story_date) values (?, ?, ?, ?, 0, ?, NOW())");
-      $story_stmt = $con->prepare($insert_story);
-      $story_stmt->bind_param("sissi", $username, $user_unique_id, $story_input, $user_color, $story_unique_id);
-      $story_stmt->execute();
-  
-      $insert_story_2 = ("insert into `profile_uploaded` (user_unique_id, username, post_texts, post_type, upload_id, post_img, post_like, post_date) values (?, ?, ?, ?, ?, ?, 0, NOW())");
-      $story_stmt_2 = $con->prepare($insert_story_2);
-      $story_stmt_2->bind_param("isssis", $user_unique_id, $username, $story_input, $post_type, $story_unique_id, $user_color);
-      $story_stmt_2->execute();
-      echo "<script>alert('successfully uploaded')</script>";
-      echo "<script>window.open('user_profile.php', '_self')</script>";
+
+    if (!empty($story_input)) {
+        $post_type = "story-post";
+        $story_unique_id = rand();
+        $username = $_SESSION["username"];
+        $insert_story = ("insert into `profile_story` (username, user_unique_id, user_story, user_color, user_story_like, story_unique_id, story_date) values (?, ?, ?, ?, 0, ?, NOW())");
+        $story_stmt = $con->prepare($insert_story);
+        $story_stmt->bind_param("sissi", $username, $user_unique_id, $story_input, $user_color, $story_unique_id);
+        $story_stmt->execute();
+
+        $insert_story_2 = ("insert into `profile_uploaded` (user_unique_id, username, post_texts, post_type, upload_id, post_img, post_like, post_date) values (?, ?, ?, ?, ?, ?, 0, NOW())");
+        $story_stmt_2 = $con->prepare($insert_story_2);
+        $story_stmt_2->bind_param("isssis", $user_unique_id, $username, $story_input, $post_type, $story_unique_id, $user_color);
+        $story_stmt_2->execute();
+        echo "<script>alert('successfully uploaded')</script>";
+        echo "<script>window.open('user_profile.php', '_self')</script>";
+
+        $notification_type = "new post";
+        $insert_notification = ("insert into `friend_notification_table` (user_unique_id, username, notification_type, notification_date) values (?, ?, ?, NOW())");
+        $notification_result = $con->prepare($insert_notification);
+        $notification_result->bind_param("iss", $user_unique_id, $username, $notification_type);
+        $notification_result->execute();
+
     } else {
-      unset( $_SESSION["story_color"] );
-      echo "<script>alert('Something went wrong')</script>";
-      echo "<script>window.open('user_profile.php', '_self')</script>";
+        unset($_SESSION["story_color"]);
+        echo "<script>alert('Something went wrong')</script>";
+        echo "<script>window.open('user_profile.php', '_self')</script>";
     }
-  }
-  
+}
 
-unset( $_SESSION["POST_1"] );
 
-// } catch (Exception $e) {
-//     echo "<script>alert('Something went wrong 1')</script>";
-// }
+unset($_SESSION["POST_1"]);
+
+} catch (Exception $e) {
+    echo "<script>alert('Something went wrong 1')</script>";
+    echo "<script>window.open('../user_profile_folder/user_profile.php', '_self')</script>";
+}
 ?> 

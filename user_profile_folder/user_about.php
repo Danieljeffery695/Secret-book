@@ -115,7 +115,6 @@ if($row_1 > 0) {
                         <input type="text" name="user-workplace" placeholder="Current Location..." class="user-about-input" autocomplete="off">
                         <br>
                         <button class="user-about-cancel-btn"><i class="fa-solid fa-circle-xmark"></i></button>
-                        <button class="user-about-send-btn"><i class="fa-solid fa-paper-plane"></i></button>
                         <input type="submit" value="&#8599;" class="user-about-send-btn" name="location-btn">
                     </form>
                     <h4 class="div-about-h4-1"><?php echo $user_location; ?></h4>

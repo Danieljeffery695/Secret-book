@@ -14,12 +14,12 @@ const bioSendBtn = document.querySelector(".bio-send-btn");
 const bioCancel_btn = document.querySelector(".bio-cancel-btn");
 const pBIo = document.querySelector(".p-bio");
 const notificationBell = document.querySelector(".notification-bell");
+const notificationBell1 = document.querySelector(".notification-bell-1");
 const modal2 = document.querySelector(".modal-div-1");
-const cancelNotification = document.querySelector(".cancel-notification");
-const formCancel = document.querySelector(".form-cancel");
-const modal3 = document.querySelector(".modal-div-3");
 const searchIcon = document.querySelector(".search-icon");
+const cancelNotification = document.querySelector(".cancel-notification");
 const commentCancel = document.querySelector(".comment-cancel");
+const notificationDivBell = document.querySelector(".notification-div-bell");
 const modal4 = document.querySelector(".modal-div-4");
 const modal5 = document.querySelector(".modal-div-5");
 const moreCancel = document.querySelector(".more-cancel");
@@ -32,7 +32,7 @@ const edit_label1 = document.querySelector(".edit-profile-label");
 const edit_input1 = document.querySelector(".edit-profile-input");
 const edit_profile_plus = document.querySelector(".edit-profile-plus");
 const edit_cancel_x = document.querySelector(".edit-profile-div2");
-const modal7 = document.querySelector(".modal-div-7");
+// const modal7 = document.querySelector(".modal-div-7");
 const modal8 = document.querySelector(".modal-div-8");
 const header_btn1 = document.querySelector(".header-btn1");
 const header_btn2 = document.querySelector(".header-btn2");
@@ -64,31 +64,62 @@ const deleteX = document.querySelectorAll(".delete-story");
 const deleteXX = document.querySelectorAll(".delete-post");
 const modal10 = document.querySelector(".modal-div-10");
 const cancelFakex = document.querySelector(".x-cancel-fake");
+const notificationBtn = document.querySelector(".notification-btn1");
+const notificationDiv = document.querySelector(".notification-div");
+const notificationBackBtn = document.querySelector(".personal-back-btn");
+const notificationPersonDiv = document.querySelector(".notification-personal-div");
+const notificationForwardBtn = document.querySelector(".notification-see-all-btn");
+const modal11 = document.querySelector(".modal-div-11");
+const searchResultDiv = document.querySelector(".search-result-div");
+const searchDiv1 = document.querySelector(".search-div-1");
+const searchCancelX = document.querySelector(".search-cancel-x");
+const searchInput = document.querySelector(".search-input-div");
+const searchRecentDiv = document.querySelector(".search-recent-div");
+const searchSeeAllP = document.querySelector(".search-see-all-p");
+const searchSeeAllX = document.querySelector(".search-see-all-x");
+const modal12 = document.querySelector(".modal-div-12");
+const modal13 = document.querySelector(".modal-div-13");
+const closedMessageX = document.querySelector(".close-message-x");
+const messageUserDiv = document.querySelector(".message-users-div");
+const navMessageBtn = document.querySelector(".nav-message-btn");
+const navMessageBtn1 = document.querySelector(".nav-message-btn-1");
+const header_btn3 = document.querySelector(".header-btn3")
+const newMessageI = document.querySelector(".new-message-i");
 
 
 function isOverflown() {
   if (commentContainer.scrollHeight > commentContainer.clientHeight) {
-    commentDiv.style.overflowY = "hidden";
-    commentDiv.style.overflowX = "hidden";
-  } else {
-    commentDiv.style.overflowY = "scroll";
-    commentDiv.style.overflowX = "hidden";
+    return true
   }
+} 
+
+function overflowElement() {
+if(isOverflown()) {
+  commentDiv.style.overflowY = "hidden";
+  commentDiv.style.overflowX = "hidden";
+} else {
+  commentDiv.style.overflowY = "scroll";
+  commentDiv.style.overflowX = "hidden";
+}
 }
 
-storyCommentView.forEach(element => {
-  element.addEventListener("click", () => {
-    modal5.classList.remove("hidden");
-    isOverflown();
-    });
+commentView.forEach(comment => {
+comment.addEventListener("click", () => {
+  modal5.classList.remove("hidden");
+  overflowElement();
+  // isOverflown();
+})
 });
 
-commentView.forEach(element => {
-  element.addEventListener("click", () => {
-    modal5.classList.remove("hidden");
-    isOverflown();
-    });
+storyCommentView.forEach(comment => {
+comment.addEventListener("click", () => {
+  modal5.classList.remove("hidden");
+  overflowElement();
+  // isOverflown();
+})
 });
+
+
 
 addStory_label.addEventListener("change", () => {
   if (addStory_pic.value !== "") {
@@ -101,27 +132,45 @@ header_btn1.addEventListener("click", () => {
   modal8.classList.remove("hidden");
 });
 
+notificationForwardBtn.addEventListener("click", () => {
+  window.open(".././notification.php");
+})
+
+notificationBtn.addEventListener("click", () => {
+  notificationDiv.classList.add("hidden");
+  notificationPersonDiv.classList.remove("hidden");
+})
+
+notificationBackBtn.addEventListener("click", () => {
+  notificationDiv.classList.remove("hidden");
+  notificationPersonDiv.classList.add("hidden");
+})
+
+notificationDivBell.addEventListener("click", () => {
+  modal2.classList.remove("hidden");
+});
+
 addStory_exit.addEventListener("click", () => {
   modal8.classList.add("hidden");
 });
 
-edit_label.addEventListener("change", () => {
-  if (edit_input.value !== "") {
-    edit_cover_plus.classList.add("hidden");
-    edit_input.classList.remove("hidden");
-  }
-});
+// edit_label.addEventListener("change", () => {
+//   if (edit_input.value !== "") {
+//     edit_cover_plus.classList.add("hidden");
+//     edit_input.classList.remove("hidden");
+//   }
+// });
 
-edit_label1.addEventListener("change", () => {
-  if (edit_input1.value !== "") {
-    edit_profile_plus.classList.add("hidden");
-    edit_input1.classList.remove("hidden");
-  }
-});
+// edit_label1.addEventListener("change", () => {
+//   if (edit_input1.value !== "") {
+//     edit_profile_plus.classList.add("hidden");
+//     edit_input1.classList.remove("hidden");
+//   }
+// });
 
-edit_cancel_x.addEventListener("click", () => {
-  modal7.classList.add("hidden");
-});
+// edit_cancel_x.addEventListener("click", () => {
+//   modal7.classList.add("hidden");
+// });
 
 header_btn2.addEventListener("click", () => {
   modal7.classList.remove("hidden");
@@ -192,17 +241,17 @@ notificationBell.addEventListener("click", () => {
   modal2.classList.remove("hidden");
 });
 
+notificationBell1.addEventListener("click", () => {
+  window.open(".././notification.php", "_self");
+});
+
 cancelNotification.addEventListener("click", () => {
   modal2.classList.add("hidden");
 });
 
 searchIcon.addEventListener("click", () => {
-  modal3.classList.remove("hidden");
-});
-
-formCancel.addEventListener("click", () => {
-  modal3.classList.add("hidden");
-});
+  window.open(".././search_file1.php", "_self");
+})
 
 commentCancel.addEventListener("click", () => {
   modal4.classList.add("hidden");
@@ -251,6 +300,71 @@ colorPick5.addEventListener("click", () => {
 colorPick6.addEventListener("click", () => {
   colorPick6.style.border = "2px solid darkgray";
 });
+
+
+searchCancelX.addEventListener("click", () => {
+  modal11.classList.add("hidden");
+});
+
+searchInput.addEventListener("click", () => {
+  modal11.classList.remove("hidden");
+});
+
+function check(el) {
+  let curOverf = el.style.overflow;
+
+  if (!curOverf || curOverf === "visible") el.style.overflow = "hidden";
+
+  let isOverflowing =
+    el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight;
+
+  el.style.overflow = curOverf;
+
+  return isOverflowing;
+}
+
+if(searchSeeAllP) {
+  searchSeeAllP.addEventListener("click", () => {
+    modal11.classList.add("hidden");
+    modal12.classList.remove("hidden");
+
+    if (check(searchRecentDiv)) {
+      searchRecentDiv.style.overflowY = "scroll";
+    } else {
+        console.log("Not overflow");
+    }
+    
+  })
+}
+
+searchSeeAllX.addEventListener("click", () => {
+  modal12.classList.add("hidden");
+})
+
+navMessageBtn.addEventListener("click", () => {
+  modal13.classList.remove("hidden");
+  if (check(messageUserDiv)) {
+    messageUserDiv.style.overflowY = "scroll";
+  } else {
+      console.log("Not overflow");
+  }
+});
+
+navMessageBtn1.addEventListener("click", function() {
+  window.open(".././message.php", "_self");
+})
+
+closedMessageX.addEventListener("click", () => {
+  modal13.classList.add("hidden");
+});
+
+header_btn3.addEventListener("click", () => {
+  window.open("../log_out_folder/log_out.php", "_self");
+});
+
+newMessageI.addEventListener("click", () => {
+  window.open(".././message.php", "_self");
+})
 
 storyForm.forEach(element => {
   element.addEventListener("submit", () => {

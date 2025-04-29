@@ -180,6 +180,20 @@
     border-radius: inherit;
 }
 
+.notification-num {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: red;
+    position: relative;
+    top: -115%;
+    right: -65%;
+    color: white;
+    font-family: pacifico, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
 
 /* header container start here */
 .header-container {
@@ -228,8 +242,8 @@
 .header-div h1 {
     font-size: 30px;
     font-family: kode mono, sans-serif;
-    margin-left: 45px;
-    margin-top: 20px;
+    /* margin-left: 45px; */
+    /* margin-top: 20px; */
 }
 
 .header-img-div-2 {
@@ -737,19 +751,53 @@
     height: 500px;
     background-color: transparent;
     position: fixed;
-    top: 20%;
+    top: 14%;
     z-index: 7;
 }
 
 .notification-div {
- width: 370px;
- height: 300px/auto;
+ width: 380px;
+ height: 400px;
  border-radius: 10px;
- margin: auto;
  background-color: white;
  box-shadow: 5px 6px 4px gainsboro;
- overflow-y: scroll;
+ overflow: hidden;
  transition: all 200ms;
+ position: absolute;
+ right: 5%;
+}
+
+.notification-personal-div {
+    width: 380px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 6px 4px gainsboro;
+    overflow: hidden;
+    transition: all 200ms;
+    position: absolute;
+    right: 5%;
+}
+
+.personal-div-nav {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.personal-div-nav > i {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+.personal-div-nav > i:hover {
+    background-color: gray;
 }
 
 .notification-div h3 {
@@ -763,6 +811,8 @@
 .notification-div-1 {
     width: 100%;
     height: 50px;
+    margin-bottom: 15px;
+    display: flex;
 }
 
 .notification-btn {
@@ -776,10 +826,11 @@
     font-size: 14px;
     font-family: pacifico, sans-serif;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .notification-btn1 {
-    width: 70px;
+    width: 80px;
     height: 45px;
     border-radius: 10px;
     border: 2px gainsboro solid;
@@ -788,13 +839,15 @@
     font-size: 14px;
     font-family: pacifico, sans-serif;
     font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
 }
 
 .notification-div-2 {
-    width: 100%;
-    height: 100px;
+    width: 90%;
+    height: 100%;
     display: flex;
-    margin-top: 20px;
 }
 
 .notification-div-4 {
@@ -805,7 +858,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .notification-div-2 p {
@@ -835,11 +888,68 @@
     color: red;
 }
 
+.notification-div2 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.notification-recent {
+    width: 40px;
+    height: 100%; 
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.update-div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: 15px;
+}
+
+.notification-icon-div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    position: relative;
+    left: 65%;
+    top: -45%;
+    z-index: 2;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.notification-icon-div > i {
+    color: white;
+}
+
 .notification-img {
     width: inherit;
     height: inherit;
     border-radius: inherit;
-    object-fit:contain;
+    object-fit: contain;
+}
+
+.notification-num-1 {
+    width: 23px;
+    height: 23px;
+    border-radius: 50px;
+    background-color: red;
+    position: relative;
+    top: -115%;
+    right: -75%;
+    color: white;
+    font-family: pacifico, sans-serif;
+    font-size: 14px;
+    text-align: center;
 }
 
 .modal-div-2 {
@@ -1181,9 +1291,7 @@
     height: 40px;
     border-radius: 50%;
     font-size: 24px;
-    text-align: center;
     border: 2px dotted blue;
-    padding-top: 5px;
     cursor: pointer;
     margin-left: 10px;
     color: blue;
@@ -1682,18 +1790,551 @@
     padding-top: 50px;
 }
   
+.modal-div-11 {
+    width: 100%;
+    height: 600px;
+    background-color: transparent;
+    position: fixed;
+    top: 10%;
+    z-index: 2;
+    display: flex;
+}
+
+.search-div-1 {
+    width: 310px;
+    height: 370px;
+    /* background-color: red; */
+    position: relative;
+    left: 9%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /* width: 380px; */
+    /* height: 400px; */
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 6px 4px gainsboro;
+    /* overflow: hidden; */
+    transition: all 200ms;
+    /* position: absolute; */
+    /* right: 5%; */
+       
+}
+
+.search-div-nav {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-div-nav > p {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: kode mono, sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.search-div-nav > i {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-result-div {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.result-div {
+    width: 280px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.result-div:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.search-icon-div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin-left: 8px;
+    text-align: center;
+    align-self: center;
+    padding-top: 7px;
+}
+
+.search-text-div {
+    width: 226px;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.search-text-div > p {
+    font-size: 13px;
+    font-family: kode mono, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.search-remove-div {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    align-self: center;
+    text-align: center;
+    padding-top: 4px;
+    margin-right: 5px;
+}
+
+.search-remove-div:hover {
+    background-color: dimgrey;
+    cursor: pointer;
+}
+
+.see-all-search {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.see-all-search > p {
+    font-size: 15px;
+    font-family: kode mono, sans-serif;
+    color: blue;
+    cursor: pointer;
+}
+
+.modal-div-12 {
+    width: 100%;
+    height: 600px;
+    background-color: transparent;
+    position: fixed;
+    top: 15%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.search-recent-div {
+    width: 80%;
+    height: 600px;
+    border-radius: 12px;
+    background-color: white;
+    overflow: hidden;
+}
+
+@supports selector(::-webkit-scrollbar) {
+
+    .search-recent-div::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    .search-recent-div::-webkit-scrollbar-thumb {
+        background-color: #b0b0b0;
+        border: 0.05em solid #eeeeee;
+        border-radius: 12px;
+    }
+      
+    .search-recent-div::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+      
+    .search-recent-div::-webkit-scrollbar-button:single-button {
+        border-style: solid;
+        width: 13px;
+    }
+    
+    .search-recent-div::-webkit-scrollbar-button:single-button:vertical:decrement {
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent #555555 transparent;
+    }
+      
+    .search-recent-div::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+        border-color: transparent transparent #777777 transparent;
+    }
+    
+    .search-recent-div::-webkit-scrollbar-button:single-button:vertical:increment {
+        border-width: 8px 8px 0 8px;
+        border-color: #555555 transparent transparent transparent;
+    }
+    
+    .search-recent-div::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+        border-color: #777777 transparent transparent transparent;
+    }
+    
+}
+    
 
 
+.search-recent-nav-div {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-recent-nav-div > h2 {
+    font-family: kode mono, sans-serif;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.remove-recent-div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.remove-recent-div:hover {
+    background-color: dimgray;
+    color: white;
+}
+
+.remove-recent-div > i {
+    font-size: 20px;
+}
+
+.search-recent-div-1 {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.see-all-result-div {
+    width: 85%;
+    height: 70px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 4px 6px 2px 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.see-all-result-div:hover {
+    background-color: dimgrey;
+}
+
+.see-all-result-div-1 {
+    width: 80%;
+    height: inherit;
+}
+
+.see-all-result-div-1 > p {
+    font-size: 14px;
+    font-family: kode mono, sans-serif;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    color: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    background-color: dimgray;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #fff;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .popup .close:hover {
+    color: #06D85F;
+  }
+
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  .pop-up-1-a {
+    text-decoration: none;
+    color: black;
+  }
 
 
+  .modal-div-13 {
+    width: 100%;
+    height: 680px;
+    background-color: transparent;
+    position: fixed;
+    top: 10%;
+    z-index: 2;
+    display: flex;
+    justify-content: right;
+    padding-top: 20px;
+}
 
+.message-inbox-div {
+    width: 330px;
+    height: 620px;
+    position: relative;
+    margin-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 6px 6px gainsboro;
+}
 
+.message-nav-div {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.message-nav-div > h2 {
+    font-family: kode mono, sans-serif;
+    margin-left: 10px;
+}
+
+.new-chat-div {
+    width: 120px;
+    height: 100%;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.new-chat-div > i {
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.message-input-div {
+    width: 100%;
+    height: 60px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.message-search-input {
+    width: 90%;
+    height: 45px;
+    border: 2px solid gainsboro;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: kode mono, sans-serif;
+    padding-left: 30px;
+    padding-right: 10px;
+    outline-color: blue;
+    background-image: url("searching.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+}
+
+.message-category-div {
+    width: 70px;
+    height: 27px;
+    background-color: lightblue;
+    color: blue;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.message-category-div > p {
+    font-size: 14px;
+    font-family: kode mono, sans-serif;
+}
+
+.message-users-div {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-message {
+    width: 95%;
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.user-message:hover {
+    background-color: lightgray;
+}
+
+.message-picture-div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.message-picture-div > img {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+.message-data-div {
+    width: 68%;
+    height: inherit;
+    padding-top: 5px;
+}
+
+.message-username-p {
+    font-size: 13px;
+    font-family: kode mono, sans-serif;
+}
+
+.message-p {
+    font-size: 14px;
+    font-family: kode mono, sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.update-message-div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;    
+    align-self: center;
+    margin-right: 5px;
+    background-color: blue;
+}
+
+@supports selector(::-webkit-scrollbar) {
+
+.message-users-div::-webkit-scrollbar {
+    width: 12px;
+}
+
+.message-users-div::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0;
+    border: 0.05em solid #eeeeee;
+    border-radius: 12px;
+}
+  
+.message-users-div::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+  
+.message-users-div::-webkit-scrollbar-button:single-button {
+    border-style: solid;
+    width: 13px;
+}
+
+.message-users-div::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #555555 transparent;
+}
+  
+.message-users-div::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+
+.message-users-div::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #555555 transparent transparent transparent;
+}
+
+.message-users-div::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+
+}
+
+  
 
 
 /* Modal ends here */
 
 /* Media query start here */
+
+@media only screen and (min-height: 1000px) {
+    .modal-div-13, .modal-div-11, .modal-div-1 {
+        top: 5%;
+    }
+}
+
+@media only screen and (min-height: 1000px) {
+    .modal-div-13, .modal-div-11, .modal-div-1 {
+        top: 5%;
+    }
+}
+
 
 @media only screen and (max-width: 319px) {
     .navigation-div {
@@ -1724,6 +2365,15 @@
 
 @media only screen and (min-width: 320px) {
 
+    html {
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */     
+    }
+
+    html::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
+
     body {
         width: 100%;
     }
@@ -1736,7 +2386,7 @@
     .nav-img {
         height: 30px;
         margin-left: -5px;
-        width: 115px;   
+        width: 95px;   
     }
 
     .search-input {
@@ -1774,6 +2424,18 @@
         height: 40px;
     }
 
+    .nav-message-btn {
+        display: none;
+    }
+
+    .table-cells-icon {
+        display: unset;
+    }
+
+    .notification-div-bell {
+        display: none;
+    }
+
     /* header div start here */
 
     .header-container {
@@ -1805,8 +2467,7 @@
     }
 
     .header-div h1 {
-        margin-left: 45px;
-        margin-top: -50px;
+        align-self: center;
     }
 
     .header-div1 {
@@ -1924,39 +2585,6 @@
         width: 100%;
     }
 
-    .notification-div {
-        width: 310px;
-        height: 400px/auto;
-        overflow-y: unset;
-        overflow-x: hidden;
-    }
-
-    .notification-div h3 {
-        padding-left: 35px;
-    }
-
-    .notification-div-1 {
-        height: 60px;
-    }
-
-    .notification-btn, .notification-btn1 {
-        width: 60px;
-        height: 35px;
-    }
-
-    .notification-div-2 {
-        height: 130px;
-    }
-
-    .notification-div-img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .notification-div-4 {
-        margin-left: 4px;
-        white-space: normal;
-    }
 
     .pop-up-div {
         width: 310px;
@@ -2282,10 +2910,6 @@
 }
 
 @media only screen and (min-width: 425px) {
-    .table-cells-icon {
-        display: unset;
-    }
-
     .header-img-div {
         width: 350px;
     }
@@ -2424,6 +3048,15 @@
 
 }
 
+@media screen and (max-width: 700px) {
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
     .find-friend-div {
@@ -2461,6 +3094,7 @@
     }
 
     .header-div h1 {
+        align-self: normal;
         margin-top: 20px;
         margin-left: 70px;
         font-size: 25px;
@@ -2594,6 +3228,14 @@
 
     .header-img-div {
         width: 830px;
+    }
+
+    .notification-div-bell-1 {
+        display: none;
+    }
+
+    .notification-div-bell {
+        display: unset;
     }
 
     .header-div h1 {
@@ -2783,6 +3425,32 @@
 
 @media only screen and (min-width: 1024px) {
 
+    html {
+        -ms-overflow-style:unset ; /* for Internet Explorer, Edge */
+        scrollbar-width:unset; /* for Firefox */          
+        }
+          
+        ::-webkit-scrollbar {
+           display:unset; /* for Chrome, Safari, and Opera */
+        }
+
+        .modal-div-12 {
+            height: 500px;
+        }
+
+        .search-recent-div {
+            height: 500px;
+        }
+
+        .nav-message-btn {
+            display: unset;
+        }
+
+        .nav-message-btn-1 {
+            display: none;
+        }
+        
+
     
 .navigation-div {
     width: 100%;
@@ -2939,6 +3607,7 @@
 .body-container {
     width: 100%;
     height: 100%;
+
 }
 
 .body-container-div {
@@ -2947,6 +3616,7 @@
     margin: auto;
     display: flex;
     flex-direction: row;
+
 }
 
 .body-div1 {
@@ -3036,7 +3706,7 @@
 
 .born-div {
     width: 100%;
-    height: 100%;
+    height: 100px;
     margin-top: 10px;
 }
 
@@ -3918,6 +4588,14 @@
       .post-input, .born-div-input-1 {
         width: 375px;
       }
+
+      .modal-div-12 {
+        height: 640px;
+    }
+
+    .search-recent-div {
+        height: 600px;
+    }
 
 }
 

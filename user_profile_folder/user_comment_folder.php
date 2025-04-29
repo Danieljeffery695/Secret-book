@@ -29,57 +29,6 @@ if(isset($_SESSION["user_unique_id"])) {
 </head>
 <body>
     <?php 
-    // if(isset($_POST["user_comment_id"])) {
-    //     $comment_id = $_POST["user_comment_id"];
-    //     $select_comment = "select * from `secret_users_comment` where post_user_id = $comment_id order by user_id desc";
-    //     $result_select = mysqli_query($con, $select_comment);
-    //     $row_count = mysqli_num_rows($result_select);
-    //     if($row_count >= 1) {
-    //         while($row_data = mysqli_fetch_assoc($result_select)) {
-    //             $username = $row_data["username"];
-    //             // $user_unique_id = $row_data["unique_id"];
-    //             $user_pics = $row_data["user_pics"];
-    //             $comment = $row_data["comment"];
-    //             $comment_date = $row_data["comment_date"];
-
-    //             echo "
-    //             <div class='comment-div-1'>
-    //               <div class='comment-div-pics'>
-    //                 <img
-    //                   src='../sign_up_folder/user_image/$user_pics'
-    //                   alt='user pics'
-    //                   class='comment-profile-pics'
-    //                 />
-    //               </div>
-    //               <div class='comment-div-2'>
-    //                 <span>$username</span>
-    //                 <p>$comment</p>
-    //               </div>
-    //             </div>
-    //             <div class='comment-div-date'>
-    //               <p>$comment_date</p>
-    //             </div>";
-    //         }
-    //     } else {
-    //         echo "
-    //     <div class='comment-div-1'>
-    //       <div class='comment-div-pics'>
-    //         <img
-    //           src='../user_home_folder/pixlr-image-generator-7f4fd879-a2ff-4d59-b38c-968bb6a7ce39.png'
-    //           alt='user pics'
-    //           class='comment-profile-pics'
-    //         />
-    //       </div>
-    //       <div class='comment-div-2'>
-    //         <span>Comment Manager</span>
-    //         <p>NO COMMENT ADDED</p>
-    //       </div>
-    //     </div>
-    //     <div class='comment-div-date'>
-    //       <p>Starting of Time</p>
-    //     </div>";
-    //     }
-    // }
 
     if(isset($_POST["user_comment_id"])) {
       $user_comment = $_POST["user_comment_id"];

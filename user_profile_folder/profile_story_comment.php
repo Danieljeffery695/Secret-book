@@ -50,7 +50,7 @@ include("../include_folder/include.php");
         echo "nothing returned";
       }
 
-      $select_comment = "select * from `profile_story_comment` where post_id = $post_id and user_unique_id = $story_comment_id order by user_id desc";
+      $select_comment = "select * from `profile_story_comment` where post_id = $post_id order by user_id desc";
       $comment_result = mysqli_query($con, $select_comment);
       $comment_row = mysqli_num_rows($comment_result);
       if($comment_row >= 1) {
