@@ -6,34 +6,31 @@ include("../include_folder/include.php");
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- font awesome links start here -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-      />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- ends here -->
     <!-- font text start here -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kode+Mono:wght@400..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kode+Mono:wght@400..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
     <!-- ends here -->
     <!-- link css start here -->
     <link rel="stylesheet" href="user_home.css" />
     <!-- link ends here -->
     <!-- animation link start here -->
     <!-- animation link ends here -->
-  </head>
-  <body>
+</head>
+
+<body>
     <?php
 
     if(isset($_POST["home_story_comment"])) {
@@ -51,7 +48,7 @@ include("../include_folder/include.php");
         echo "nothing returned";
       }
 
-      $select_comment = "select * from `user_home_story_comment` where post_id = $post_id and user_unique_id = $story_comment_id order by user_id desc";
+      $select_comment = "select * from `user_home_story_comment` where post_id = $post_id order by user_id desc";
       $comment_result = mysqli_query($con, $select_comment);
       $comment_row = mysqli_num_rows($comment_result);
       if($comment_row >= 1) {
@@ -103,4 +100,4 @@ include("../include_folder/include.php");
     }
     ?>
 
-  </body>
+</body>
