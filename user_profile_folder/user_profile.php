@@ -872,7 +872,7 @@ if($post_exist) {
         // echo $personal_notification_count;
         rsort($personal_notification_1);
         if($personal_notification_count >= 1) {
-          while($pp < 3) {
+          while($pp < count($personal_notification_1) && $pp < 3) {
             $pttyh = $personal_notification_1[$pp];
                 $notification_username_25 = $personal_notification[$pttyh]["username"];
                 $notification_type_1_25 = $personal_notification[$pttyh]["type"];

@@ -194,6 +194,7 @@ class Notification {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -212,25 +213,28 @@ class Notification {
     <script defer src="friends.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    
+
     <!-- css link start here -->
-     <link rel="stylesheet" href="friends.css">
+    <link rel="stylesheet" href="friends.css">
     <!-- css link ends here -->
 </head>
+
 <body>
     <div class="navigation-div">
         <div class="navigation-div-1">
             <div class="nav-flex1">
-                <img src="../user_profile_folder/user_profile_images/secretbook-high-resolution-logo-transparent.png" alt="pics"
-                    class="nav-img">
-                <input type="text" placeholder="Search SecretBook" name="Search_input" class="search-input search-input-div" autocomplete="off">
+                <img src="../user_profile_folder/user_profile_images/secretbook-high-resolution-logo-transparent.png"
+                    alt="pics" class="nav-img">
+                <input type="text" placeholder="Search SecretBook" name="Search_input"
+                    class="search-input search-input-div" autocomplete="off">
                 <i class="fa-solid fa-magnifying-glass nav-div search-icon"></i>
             </div>
         </div>
         <div class="navigation-div-2">
             <div class="div-nav">
                 <nav class="nav">
-                    <li><a href="../user_home_folder/user_home.php" target="_self"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="../user_home_folder/user_home.php" target="_self"><i class="fa-solid fa-house"></i></a>
+                    </li>
                     <li><a href="#"><i class="fa-solid fa-user-group"></i></a></li>
                     <li><a href="#popup1"><i class="fa-solid fa-users-line"></i></a></li>
                 </nav>
@@ -245,9 +249,16 @@ class Notification {
                     <div class="nav-div table-cells-icon"><i class="fa-solid fa-table-cells"></i></div>
                     <div class="nav-div nav-message-btn"><i class="fa-solid fa-message"></i></div>
                     <div class="nav-div nav-message-btn-1"><i class="fa-solid fa-message"></i></div>
-                    <div class="nav-div notification-div-bell"><i class="fa-solid fa-bell notification-bell"></i> <div class="notification-num <?php if(!$notification_number) { echo 'hidden'; } ?>" > <?php echo $notification_number; ?></div></div>
-                    <div class="nav-div notification-div-bell-1"><i class="fa-solid fa-bell notification-bell-1"></i> <div class="notification-num <?php if(!$notification_number) { echo 'hidden'; } ?>" > <?php echo $notification_number; ?></div> </div>
-                    <div class="nav-div1"><img src="../sign_up_folder/user_image/<?php echo $user_picture; ?>" alt="pics" class="nav-img1"></div>
+                    <div class="nav-div notification-div-bell"><i class="fa-solid fa-bell notification-bell"></i>
+                        <div class="notification-num <?php if(!$notification_number) { echo 'hidden'; } ?>">
+                            <?php echo $notification_number; ?></div>
+                    </div>
+                    <div class="nav-div notification-div-bell-1"><i class="fa-solid fa-bell notification-bell-1"></i>
+                        <div class="notification-num <?php if(!$notification_number) { echo 'hidden'; } ?>">
+                            <?php echo $notification_number; ?></div>
+                    </div>
+                    <div class="nav-div1"><img src="../sign_up_folder/user_image/<?php echo $user_picture; ?>"
+                            alt="pics" class="nav-img1"></div>
                 </div>
             </div>
         </div>
@@ -255,55 +266,69 @@ class Notification {
 
     <div class="home-container-div-nav ">
         <nav class="home-nav">
-          <li><a href="../user_home_folder/user_home.php" target="_self"><i class="fa-solid fa-house-chimney-crack"></i></a></li>
-          <li><i class="fa-solid fa-user-group"></i></li>
-          <li><i class="fa-solid fa-message nav-message-btn-2"></i></li>
-          <li>
-            <a href="#popup1"><i class="fa-solid fa-tv"></i></a>
-          </li>
-          <li>
-              <div class="notification-num-2 <?php if(!$notification_number) { echo 'hidden'; } ?>" > <?php echo $notification_number; ?></div>
-              <a href=".././notification.php" target="_self"><i class="fa-solid fa-bell"></i></a>
-          </li>
-          <li><a href="#popup1"><i class="fa-solid fa-people-group"></i></a></li>
+            <li><a href="../user_home_folder/user_home.php" target="_self"><i
+                        class="fa-solid fa-house-chimney-crack"></i></a></li>
+            <li><i class="fa-solid fa-user-group"></i></li>
+            <li><i class="fa-solid fa-message nav-message-btn-2"></i></li>
+            <li>
+                <a href="#popup1"><i class="fa-solid fa-tv"></i></a>
+            </li>
+            <li>
+                <div class="notification-num-2 <?php if(!$notification_number) { echo 'hidden'; } ?>">
+                    <?php echo $notification_number; ?></div>
+                <a href=".././notification.php" target="_self"><i class="fa-solid fa-bell"></i></a>
+            </li>
+            <li><a href="#popup1"><i class="fa-solid fa-people-group"></i></a></li>
         </nav>
     </div>
     <!-- navigation ends here -->
-     <!-- main container start here -->
+    <!-- main container start here -->
     <div class="main-container">
 
-    <div class="main-container-1">
+        <div class="main-container-1">
             <div class="main-container-div">
                 <div class="main-div-1">
                     <h2>Friends</h2>
                     <i class="fa-solid fa-user-gear"></i>
                 </div>
                 <div class="main-div main-div1">
-                <i class="fa-solid fa-users main-icon-1 home-icon"><p>Home</p></i>
+                    <i class="fa-solid fa-users main-icon-1 home-icon">
+                        <p>Home</p>
+                    </i>
                 </div>
                 <div class="main-div main-div2">
-                <i class="fa-solid fa-user-minus main-icon-1"><p>Friend requests</p></i>
-                <i class="fa-solid fa-chevron-right main-icon"></i>
+                    <i class="fa-solid fa-user-minus main-icon-1">
+                        <p>Friend requests</p>
+                    </i>
+                    <i class="fa-solid fa-chevron-right main-icon"></i>
                 </div>
                 <div class="main-div main-div3">
-                <i class="fa-solid fa-user-plus main-icon-1"><p>Suggestions</p></i>
-                <i class="fa-solid fa-chevron-right main-icon"></i>
+                    <i class="fa-solid fa-user-plus main-icon-1">
+                        <p>Suggestions</p>
+                    </i>
+                    <i class="fa-solid fa-chevron-right main-icon"></i>
                 </div>
                 <div class="main-div main-div4">
-                <i class="fa-solid fa-user-check main-icon-1"><p>All friends</p></i>
-                <i class="fa-solid fa-chevron-right main-icon"></i>
+                    <i class="fa-solid fa-user-check main-icon-1">
+                        <p>All friends</p>
+                    </i>
+                    <i class="fa-solid fa-chevron-right main-icon"></i>
                 </div>
                 <div class="main-div main-div5">
-                <i class="fa-solid fa-cake-candles main-icon-1"><p>Birthdays</p></i>
-                <i class="fa-solid fa-chevron-right main-icon"></i>
+                    <i class="fa-solid fa-cake-candles main-icon-1">
+                        <p>Birthdays</p>
+                    </i>
+                    <i class="fa-solid fa-chevron-right main-icon"></i>
                 </div>
                 <div class="main-div main-div6">
-                <i class="fa-solid fa-user-check main-icon-1"><p>Custom Lists</p></i>
-                <i class="fa-solid fa-chevron-right main-icon"></i>
+                    <i class="fa-solid fa-user-check main-icon-1">
+                        <p>Custom Lists</p>
+                    </i>
+                    <i class="fa-solid fa-chevron-right main-icon"></i>
                 </div>
             </div>
 
-           
+
             <div class="main-container-friend-request hidden">
                 <div class="friend-request-nav">
                     <div class="friend-nav-1"><i class="fa-solid fa-arrow-left"></i></div>
@@ -317,7 +342,7 @@ class Notification {
                     <p class="friend-p-1">Lists requests <?php echo $friend_request_row; ?></p>
                 </div>
                 <div class="friend-request-list">
-                    
+
                     <?php 
                     if($friend_request) {
                         while($friend_request_data = mysqli_fetch_assoc($friend_request_result)) {
@@ -371,7 +396,7 @@ class Notification {
                 </div>
             </div>
 
-        
+
 
             <div class="suggestion-container-div hidden">
                 <div class="suggestion-nav">
@@ -385,7 +410,7 @@ class Notification {
                     <p class="suggestion-p">People you may know</p>
                 </div>
                 <div class="suggestion-list">
-                   
+
                     <?php 
                         if($users_available_1) { 
                             $select_user_out_1 = "select * from `secret_users` where user_unique_id = $user_unique_id and location = '$location'";
@@ -516,7 +541,7 @@ class Notification {
         </div>
 
 
-       <?php
+        <?php
         if($users_available) {
 
                 if($users_location_row == 1) {
@@ -676,101 +701,209 @@ class Notification {
 
         <div class="main-container-4 hidden friend-profile-div">
             <div class="no-friend-div friend-profile-div-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="no-friend-svg" xml:space="preserve" width="655.359" height="655.359" style="shape-rendering:geometricPrecision;
-                text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd" viewBox="0 0 6.827 6.827"><defs>
-                <style>.fil8{fill:#2f2f2f}.fil7{fill:#545454}.fil0{fill:#7e7e7e}.fil1{fill:#838383}.fil2{fill:#8e8e8f}.fil3{fill:#bcbcbc}.fil4{fill:#d1d1d1}</style>
-                </defs><g id="Layer_x0020_1"><path class="fil0" d="M4.217 4.034h.478v1.881h-.478zM3.523 4.034h.478v1.881h-.478z"/><path class="fil1" d="M3.153 2.167c.216-.047 
-                1.296-.329 1.416-.195l.029.124-1.375.444-.07-.373z"/><path class="fil2" d="M4.34 2.038h-.462c-.235 0-.427.092-.427.327v1.69h1.317v-1.69c0-.235-.192-.327-.427-.327z"/>
-                <path class="fil3" d="M3.944 1.758h.33v.421h-.33z"/><g id="_530131264"><path id="_530131912" class="fil3" d="M3.754 1.641s-.174-.217-.09-.264c0 0 .19.005.09.264z"/>
-                <path id="_530131816" class="fil3" d="M4.464 1.641s.175-.217.09-.264c0 0-.19.005-.09.264z"/></g><ellipse class="fil4" cx="4.109" cy="1.42" rx=".4" ry=".514"/>
-                <path class="fil3" d="m4.09 2.29-.151.952.17.255.17-.255-.151-.951-.019-.001z"/><path d="M3.78 2.05a.96.96 0 0 1 .133-.012h.03l.166.142.166-.142h.03a.96.96
-                0 0 1 .134.012l-.185.278-.145-.148-.144.148-.186-.278z" style="fill:#6e6e6e"/><path style="fill:#868686" d="m4.046 2.244.063-.064.063.064-.063.066z"/>
-                <path class="fil4" d="M4.959 3.54s0 .035-.03.052c0 0-.035.03-.059.113 0 0-.023.093-.035.128 0 0 .025.047.052-.02 0 0 .022-.083.038-.078 0 0 .014.052
+                <svg xmlns="http://www.w3.org/2000/svg" class="no-friend-svg" xml:space="preserve" width="655.359"
+                    height="655.359" style="shape-rendering:geometricPrecision;
+                text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+                    viewBox="0 0 6.827 6.827">
+                    <defs>
+                        <style>
+                        .fil8 {
+                            fill: #2f2f2f
+                        }
+
+                        .fil7 {
+                            fill: #545454
+                        }
+
+                        .fil0 {
+                            fill: #7e7e7e
+                        }
+
+                        .fil1 {
+                            fill: #838383
+                        }
+
+                        .fil2 {
+                            fill: #8e8e8f
+                        }
+
+                        .fil3 {
+                            fill: #bcbcbc
+                        }
+
+                        .fil4 {
+                            fill: #d1d1d1
+                        }
+                        </style>
+                    </defs>
+                    <g id="Layer_x0020_1">
+                        <path class="fil0" d="M4.217 4.034h.478v1.881h-.478zM3.523 4.034h.478v1.881h-.478z" />
+                        <path class="fil1" d="M3.153 2.167c.216-.047 
+                1.296-.329 1.416-.195l.029.124-1.375.444-.07-.373z" />
+                        <path class="fil2"
+                            d="M4.34 2.038h-.462c-.235 0-.427.092-.427.327v1.69h1.317v-1.69c0-.235-.192-.327-.427-.327z" />
+                        <path class="fil3" d="M3.944 1.758h.33v.421h-.33z" />
+                        <g id="_530131264">
+                            <path id="_530131912" class="fil3"
+                                d="M3.754 1.641s-.174-.217-.09-.264c0 0 .19.005.09.264z" />
+                            <path id="_530131816" class="fil3"
+                                d="M4.464 1.641s.175-.217.09-.264c0 0-.19.005-.09.264z" />
+                        </g>
+                        <ellipse class="fil4" cx="4.109" cy="1.42" rx=".4" ry=".514" />
+                        <path class="fil3" d="m4.09 2.29-.151.952.17.255.17-.255-.151-.951-.019-.001z" />
+                        <path d="M3.78 2.05a.96.96 0 0 1 .133-.012h.03l.166.142.166-.142h.03a.96.96
+                0 0 1 .134.012l-.185.278-.145-.148-.144.148-.186-.278z" style="fill:#6e6e6e" />
+                        <path style="fill:#868686" d="m4.046 2.244.063-.064.063.064-.063.066z" />
+                        <path class="fil4" d="M4.959 3.54s0 .035-.03.052c0 0-.035.03-.059.113 0 0-.023.093-.035.128 0 0 .025.047.052-.02 0 0 .022-.083.038-.078 0 0 .014.052
                  0 .111l-.021.107s0 .036.025.032l.04-.13s.008-.049.014-.056c0 0 .007.047-.003.078 0 0-.023.07-.022.1 0 0 .007.039.027.025 0 0 .026-.092.041-.118l.008-.086s.01-.01.007.03c0 
                  0-.002.044.001.048l-.03.078s.006.066.03.022l.038-.09.006-.06s.006-.063.018-.016l.008.03s-.008.055.003.069c0 
-                 0 .027.045.036-.076l-.024-.093v-.07s-.011-.07-.023-.082v-.035l-.145-.014z"/><path class="fil2" d="M4.713 2.178c.027-.018.595.71.451 
-                 1.44l-.292.012s.078-.734-.226-1.026l.001-.437.066.01z"/><path class="fil7" d="M2.131 4.034h.478v1.881h-.478z"/><path class="fil2" d="M3.658 
-                 2.167c-.216-.047-1.295-.329-1.415-.195l-.03.124 1.376.444.07-.373z"/><path class="fil7" d="M2.826 4.034h.478v1.881h-.478z"/><path class="fil1" 
-                 d="M2.486 2.038h.463c.235 0 .427.092.427.327v1.69H2.059v-1.69c0-.235.192-.327.427-.327z"/><path class="fil3" d="M2.552 1.758h.33v.421h-.33z"/>
-                 <g id="_530129200"><path id="_530129872" class="fil3" d="M3.073 1.641s.174-.217.09-.264c0 0-.19.005-.09.264z"/>
-                <path id="_530130088" class="fil3" d="M2.362 1.641s-.174-.217-.09-.264c0 0 .19.005.09.264z"/><ellipse id="_530129224" class="fil4" cx="2.717" 
-                cy="1.42" rx=".4" ry=".514"/><path id="_530129056" class="fil8" d="M2.347 1.465s.1-.187.116-.246c0 0 .327.357.595.03l.015.252s.283-.565-.357-.595c0 
-                0-.61.015-.37.559z"/></g><path style="fill:#e1e1e2" d="m2.736 2.29.152.952-.17.255-.171-.255.152-.951.018-.001z"/><path d="M3.047 2.05a.96.96 0 0 
-                0-.133-.012h-.031l-.166.142-.165-.142h-.03a.96.96 0 0 0-.134.012l.185.278.144-.148.145.148.185-.278z" style="fill:#6a6a6a"/><path style="fill:#b3b4b4" 
-                d="m2.78 2.244-.063-.064-.062.064.062.066z"/><path class="fil4" d="M1.868 3.54s0 .035.03.052c0 0 .035.03.058.113 0 0 .024.093.035.128 0 0-.025.047-.052-.02 0 
+                 0 .027.045.036-.076l-.024-.093v-.07s-.011-.07-.023-.082v-.035l-.145-.014z" />
+                        <path class="fil2" d="M4.713 2.178c.027-.018.595.71.451 
+                 1.44l-.292.012s.078-.734-.226-1.026l.001-.437.066.01z" />
+                        <path class="fil7" d="M2.131 4.034h.478v1.881h-.478z" />
+                        <path class="fil2" d="M3.658 
+                 2.167c-.216-.047-1.295-.329-1.415-.195l-.03.124 1.376.444.07-.373z" />
+                        <path class="fil7" d="M2.826 4.034h.478v1.881h-.478z" />
+                        <path class="fil1"
+                            d="M2.486 2.038h.463c.235 0 .427.092.427.327v1.69H2.059v-1.69c0-.235.192-.327.427-.327z" />
+                        <path class="fil3" d="M2.552 1.758h.33v.421h-.33z" />
+                        <g id="_530129200">
+                            <path id="_530129872" class="fil3"
+                                d="M3.073 1.641s.174-.217.09-.264c0 0-.19.005-.09.264z" />
+                            <path id="_530130088" class="fil3"
+                                d="M2.362 1.641s-.174-.217-.09-.264c0 0 .19.005.09.264z" />
+                            <ellipse id="_530129224" class="fil4" cx="2.717" cy="1.42" rx=".4" ry=".514" />
+                            <path id="_530129056" class="fil8" d="M2.347 1.465s.1-.187.116-.246c0 0 .327.357.595.03l.015.252s.283-.565-.357-.595c0 
+                0-.61.015-.37.559z" />
+                        </g>
+                        <path style="fill:#e1e1e2" d="m2.736 2.29.152.952-.17.255-.171-.255.152-.951.018-.001z" />
+                        <path d="M3.047 2.05a.96.96 0 0 
+                0-.133-.012h-.031l-.166.142-.165-.142h-.03a.96.96 0 0 0-.134.012l.185.278.144-.148.145.148.185-.278z"
+                            style="fill:#6a6a6a" />
+                        <path style="fill:#b3b4b4" d="m2.78 2.244-.063-.064-.062.064.062.066z" />
+                        <path class="fil4" d="M1.868 3.54s0 .035.03.052c0 0 .035.03.058.113 0 0 .024.093.035.128 0 0-.025.047-.052-.02 0 
                 0-.021-.083-.037-.078 0 0-.014.052 0 .111l.02.107s0 .036-.024.032l-.04-.13s-.008-.049-.014-.056c0 0-.007.047.003.078 0 0 .023.07.022.1 0 0-.008.039-.028.025 0 
                 0-.026-.092-.04-.118l-.008-.086s-.01-.01-.008.03c0 0 .003.044 0 .048l.03.078s-.006.066-.03.022l-.038-.09-.006-.06s-.007-.063-.018-.016l-.008.03s.008.055-.003.069c0 
-                0-.027.045-.036-.076l.023-.093v-.07s.012-.07.024-.082v-.035l.145-.014z"/><path class="fil1" d="M2.114 2.178c-.027-.018-.595.71-.451 
-                1.44l.292.012s-.078-.734.226-1.026l-.002-.437-.065.01z"/><path class="fil8" d="M3.716 1.336s.279-.33.437-.19c0 0 .252.22.379.193.243-.725-1.171-.564-.816-.003zM4.456 
+                0-.027.045-.036-.076l.023-.093v-.07s.012-.07.024-.082v-.035l.145-.014z" />
+                        <path class="fil1" d="M2.114 2.178c-.027-.018-.595.71-.451 
+                1.44l.292.012s-.078-.734.226-1.026l-.002-.437-.065.01z" />
+                        <path class="fil8" d="M3.716 1.336s.279-.33.437-.19c0 0 .252.22.379.193.243-.725-1.171-.564-.816-.003zM4.456 
                 5.707c.135 0 .244.099.244.22a.2.2 0 0 1-.005.046h-.477a.2.2 0 0 1-.006-.046c0-.121.11-.22.244-.22zM3.762 5.707c.135 0 .244.099.244.22a.2.2 0 0 1-.005.046h-.477a.2.2 
                 0 0 1-.006-.046c0-.121.11-.22.244-.22zM3.065 5.707c.134 0 .243.099.243.22a.2.2 0 0 1-.005.046h-.477a.2.2 0 0 1-.005-.046c0-.121.109-.22.244-.22zM2.37 5.707c.135 
-                0 .244.099.244.22a.2.2 0 0 1-.005.046h-.477a.2.2 0 0 1-.006-.046c0-.121.11-.22.244-.22z"/><path class="fil4" d="M2.372 2.041s-.02.03-.005.06c0 0 .012.045-.014.126 
+                0 .244.099.244.22a.2.2 0 0 1-.005.046h-.477a.2.2 0 0 1-.006-.046c0-.121.11-.22.244-.22z" />
+                        <path class="fil4" d="M2.372 2.041s-.02.03-.005.06c0 0 .012.045-.014.126 
                 0 0-.033.09-.043.126 0 0-.047.026-.032-.046 0 0 .029-.08.013-.085 0 0-.041.035-.062.093l-.043.1s-.02.03-.038.012l.04-.13s.02-.045.018-.054c0 0-.031.035-.04.066 
                 0 0-.02.071-.038.096 0 0-.028.027-.037.005 0 0 .03-.091.032-.12l.042-.077s-.003-.013-.023.022c0 0-.023.036-.028.038l-.018.082s-.042.052-.037.002l.018-.096.03-.054s.029-.055-.007-.023l-.023.02s-.024.051-.041.056c0
                 0-.048.022.012-.083l.072-.064.04-.058s.048-.052.064-.055l.02-.03.128.071zM4.44 2.041s.02.03.005.06c0 0-.012.045.014.126 0 0 .033.09.043.126 0 0 .047.026.032-.046 
                 0 0-.029-.08-.013-.085 0 0 .04.035.062.093l.042.1s.021.03.04.012l-.04-.13s-.021-.045-.02-.054c0 0 .032.035.041.066 0 0 .02.071.038.096 0 0 .027.027.037.005 
                 0 0-.03-.091-.032-.12l-.042-.077s.003-.013.023.022c0 0 .022.036.027.038l.019.082s.042.052.037.002l-.019-.096-.029-.054s-.03-.055.007-.023l.023.02s.024.051.041.056c0 
-                0 .048.022-.013-.083l-.071-.064-.04-.058S4.605 2.003 4.589 2l-.02-.03-.128.071z"/></g><path style="fill:none" d="M0 0h6.827v6.827H0z"/></svg>
+                0 .048.022-.013-.083l-.071-.064-.04-.058S4.605 2.003 4.589 2l-.02-.03-.128.071z" />
+                    </g>
+                    <path style="fill:none" d="M0 0h6.827v6.827H0z" />
+                </svg>
             </div>
             <div class="no-friend-div-1">
                 <p class="no-friend-p-4">No friend request or friend Suggestions</p>
                 <p class="no-friend-p-5 hidden">When you have friend request or suggestion, you'll see them here.</p>
                 <p class="no-friend-p-3 hidden">Select people's names to preview their profile.</p>
             </div>
-        </div> 
+        </div>
 
 
         <!-- friend profile start here -->
 
         <div class="friend-profile-container hidden">
 
-        <!-- <php include("./friend_profile_control/friend_profile.php"); ?> -->
+            <!-- <php include("./friend_profile_control/friend_profile.php"); ?> -->
 
 
-        
-         </div>
 
-<!-- </div> -->
+        </div>
+
+        <!-- </div> -->
 
 
-<!-- friend profile ends here -->
+        <!-- friend profile ends here -->
 
         <div class="birthday-container hidden">
             <div class="birthday-div">
-                <svg xmlns="http://www.w3.org/2000/svg" class="birthday-svg" width="47.43" height="48.001"><g fill="#ffbd66"><path d="M23.864 0c-.313 2.206-.778 3.175-2.3 4.143-1.878 1.187-1.514 4.751 
+                <svg xmlns="http://www.w3.org/2000/svg" class="birthday-svg" width="47.43" height="48.001">
+                    <g fill="#ffbd66">
+                        <path d="M23.864 0c-.313 2.206-.778 3.175-2.3 4.143-1.878 1.187-1.514 4.751 
                     2.746 4.751 2.834 0 3.689-1.591 3.378-3.519C27.257 2.69 23.864 0 23.864 0zM11.265 0c-.313 2.206-.778 3.175-2.3 4.143-1.878 1.187-1.513 4.751 2.746 4.751 2.834 0 
                     3.689-1.591 3.378-3.519C14.657 2.69 11.265 0 11.265 0zM40.288 5.375C39.856 2.689 36.463 0 36.463 0c-.313 2.206-.778 3.175-2.3 4.143-1.878 1.187-1.513 4.751 2.746 
-                    4.751 2.835 0 3.691-1.594 3.379-3.519z"/></g><g fill="#7a8e9b"><path d="M24.117 6.173a.74.74 0 0 0-.741.741v3.866a.741.741 0 0 0 1.482 0V6.914a.741.741 
+                    4.751 2.835 0 3.691-1.594 3.379-3.519z" />
+                    </g>
+                    <g fill="#7a8e9b">
+                        <path d="M24.117 6.173a.74.74 0 0 0-.741.741v3.866a.741.741 0 0 0 1.482 0V6.914a.741.741 
                     0 0 0-.741-.741zM11.517 6.173a.741.741 0 0 0-.741.741v3.866a.741.741 0 1 0 1.482 0V6.914a.74.74 0 0 0-.741-.741zM36.716 6.173a.74.74 0 0 0-.741.741v3.866a.741.741 
-                    0 0 0 1.482 0V6.914a.739.739 0 0 0-.741-.741z"/></g><g fill="#e2e2e2"><path d="M20.965 10.782h6.304v10.397h-6.304zM8.366 10.782h6.303v10.397H8.366zM33.564 
-                    10.782h6.304v10.397h-6.304z"/></g><path d="M1.483 30.07v15.847A2.084 2.084 0 0 0 3.567 48h40.3a2.084 2.084 0 0 0 2.084-2.084V30.07z" fill="#f1bb6b"/>
+                    0 0 0 1.482 0V6.914a.739.739 0 0 0-.741-.741z" />
+                    </g>
+                    <g fill="#e2e2e2">
+                        <path d="M20.965 10.782h6.304v10.397h-6.304zM8.366 10.782h6.303v10.397H8.366zM33.564 
+                    10.782h6.304v10.397h-6.304z" />
+                    </g>
+                    <path d="M1.483 30.07v15.847A2.084 2.084 0 0 0 3.567 48h40.3a2.084 2.084 0 0 0 2.084-2.084V30.07z"
+                        fill="#f1bb6b" />
                     <path d="M42.288 28.125a3.749 3.749 0 0 1-5.306 0 3.752 3.752 0 0 0-5.307 0 3.75 3.75 0 0 1-5.307 0 3.75 3.75 0 0 0-5.306 0 3.75 3.75 0 0 1-5.307 0 3.752 
                     3.752 0 0 0-5.307 0 3.75 3.75 0 0 1-5.307 0A3.741 3.741 0 0 0 0 27.99v3.71a3.741 3.741 0 0 1 5.141.136 3.75 3.75 0 0 0 5.307 0 3.752 3.752 0 0 1 5.307 0 
                     3.75 3.75 0 0 0 5.307 0 3.75 3.75 0 0 1 5.306 0 3.75 3.75 0 0 0 5.307 0 3.752 3.752 0 0 1 5.307 0 3.749 3.749 0 0 0 5.306 0 3.741 3.741 0 0 1 
-                    5.141-.136v-3.711a3.742 3.742 0 0 0-5.141.136z" fill="#525c6b"/><path d="M42.241 21.179H5.189A5.2 5.2 0 0 0 0 26.367v1.623a3.741 3.741 0 0 1 5.141.135 
+                    5.141-.136v-3.711a3.742 3.742 0 0 0-5.141.136z" fill="#525c6b" />
+                    <path d="M42.241 21.179H5.189A5.2 5.2 0 0 0 0 26.367v1.623a3.741 3.741 0 0 1 5.141.135 
                     3.75 3.75 0 0 0 5.307 0 3.752 3.752 0 0 1 5.307 0 3.75 3.75 0 0 0 5.307 0 3.75 3.75 0 0 1 5.306 0 3.75 3.75 0 0 0 5.307 0 3.752 3.752 0 0 1 5.307 0 3.749 
-                    3.749 0 0 0 5.306 0 3.742 3.742 0 0 1 5.141-.136v-1.622a5.205 5.205 0 0 0-5.188-5.188z" fill="#7a8e9b"/><path fill="#525c6b" d="M1.483 
-                    36.618h44.464v1.853H1.483zM1.483 41.806h44.464v1.853H1.483z"/></svg>
-                </div>
-                <div class="birthday-div-1">
+                    3.749 0 0 0 5.306 0 3.742 3.742 0 0 1 5.141-.136v-1.622a5.205 5.205 0 0 0-5.188-5.188z"
+                        fill="#7a8e9b" />
+                    <path fill="#525c6b" d="M1.483 
+                    36.618h44.464v1.853H1.483zM1.483 41.806h44.464v1.853H1.483z" />
+                </svg>
+            </div>
+            <div class="birthday-div-1">
                 <p class="birthday-p-1">When your friends have birthdays, they will appear here.</p>
             </div>
         </div>
 
         <div class="custom-container hidden">
             <div class="custom-div">
-                <svg xmlns="http://www.w3.org/2000/svg" class="custom-svg" viewBox="0 0 48 48"><defs><style>.cls-1{fill:#374f68}.cls-2{fill:#425b72}.cls-8{fill:#f26674}</style></defs>
-                    <g id="setting_laptop_with_question_sign" data-name="setting laptop with question sign"><path class="cls-1" d="M44 17v26H28l-1 1h-6l-1-1H4V17a2 2 0 0 1 
-                    2-2h36a2 2 0 0 1 2 2z"/><path class="cls-2" d="M44 17v24H10a4 4 0 0 1-4-4V15h36a2 2 0 0 1 2 2z"/><path d="M38 13.64V15H10v-1.36a2 2 0 0 1 1.61-2A2 
+                <svg xmlns="http://www.w3.org/2000/svg" class="custom-svg" viewBox="0 0 48 48">
+                    <defs>
+                        <style>
+                        .cls-1 {
+                            fill: #374f68
+                        }
+
+                        .cls-2 {
+                            fill: #425b72
+                        }
+
+                        .cls-8 {
+                            fill: #f26674
+                        }
+                        </style>
+                    </defs>
+                    <g id="setting_laptop_with_question_sign" data-name="setting laptop with question sign">
+                        <path class="cls-1" d="M44 17v26H28l-1 1h-6l-1-1H4V17a2 2 0 0 1 
+                    2-2h36a2 2 0 0 1 2 2z" />
+                        <path class="cls-2" d="M44 17v24H10a4 4 0 0 1-4-4V15h36a2 2 0 0 1 2 2z" />
+                        <path
+                            d="M38 13.64V15H10v-1.36a2 2 0 0 1 1.61-2A2 
                     2 0 0 0 12.9 8.6a2 2 0 0 1 .24-2.54l1.92-1.92a2 2 0 0 1 2.53-.25 2 2 0 0 0 3.08-1.26 2 2 0 0 1 2-1.61c3.25 0 3 0 3.43.13a2 2 0 0 1 1.25 1.48 2 2 0 
-                    0 0 3.08 1.26 2 2 0 0 1 2.53.25l1.92 1.92a2 2 0 0 1 .25 2.53 2 2 0 0 0 1.26 3.08A2 2 0 0 1 38 13.64z" style="fill:#7c7d7d"/><path d="M38 13.64V15H14a14 
+                    0 0 3.08 1.26 2 2 0 0 1 2.53.25l1.92 1.92a2 2 0 0 1 .25 2.53 2 2 0 0 0 1.26 3.08A2 2 0 0 1 38 13.64z"
+                            style="fill:#7c7d7d" />
+                        <path d="M38 13.64V15H14a14 
                     14 0 0 1 5.1-10.8 2 2 0 0 0 1.35-1 14 14 0 0 1 5.62-2.08 2 2 0 0 1 1.25 1.48 2 2 0 0 0 3.08 1.3 2 2 0 0 1 2.54.24l1.92 1.92a2 2 0 0 1 .25 2.53 2 2 0 0 0 
-                    1.26 3.08A2 2 0 0 1 38 13.64z" style="fill:#919191"/><path class="cls-1" d="M47 43v2a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2h19l1 1h6l1-1z"/>
-                    <path class="cls-2" d="M47 43v2H5a2 2 0 0 1-2-2h17l1 1h6l1-1z"/><path style="fill:#9fdbf3" d="M8 19h32v20H8z"/>
-                    <path d="M40 19v18H14a4 4 0 0 1-4-4V19z" style="fill:#b2e5fb"/><path d="M31 15H17a7 7 0 0 1 14 0z" style="fill:#dad7e5"/>
-                    <path class="cls-8" d="M27.94 25.28a4 4 0 0 0-6.51-2.34C20 24.11 19.26 27 21 27a1 1 0 0 0 1-1 2 2 0 1 1 2.76 1.85A2.92 2.92 0 0 0 23 30.58V32a1 1 0 
-                    0 0 2 0c0-1.42-.11-2 .53-2.3a4 4 0 0 0 2.41-4.42zM23.62 34.08A1 1 0 1 0 25 35a1 1 0 0 0-1.38-.92z"/><path d="M31 15H19a7 7 0 0 1 6-6.92A7 7 0 0 
-                    1 31 15z" style="fill:#edebf2"/></g></svg>
+                    1.26 3.08A2 2 0 0 1 38 13.64z" style="fill:#919191" />
+                        <path class="cls-1" d="M47 43v2a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2h19l1 1h6l1-1z" />
+                        <path class="cls-2" d="M47 43v2H5a2 2 0 0 1-2-2h17l1 1h6l1-1z" />
+                        <path style="fill:#9fdbf3" d="M8 19h32v20H8z" />
+                        <path d="M40 19v18H14a4 4 0 0 1-4-4V19z" style="fill:#b2e5fb" />
+                        <path d="M31 15H17a7 7 0 0 1 14 0z" style="fill:#dad7e5" />
+                        <path class="cls-8"
+                            d="M27.94 25.28a4 4 0 0 0-6.51-2.34C20 24.11 19.26 27 21 27a1 1 0 0 0 1-1 2 2 0 1 1 2.76 1.85A2.92 2.92 0 0 0 23 30.58V32a1 1 0 
+                    0 0 2 0c0-1.42-.11-2 .53-2.3a4 4 0 0 0 2.41-4.42zM23.62 34.08A1 1 0 1 0 25 35a1 1 0 0 0-1.38-.92z" />
+                        <path d="M31 15H19a7 7 0 0 1 6-6.92A7 7 0 0 
+                    1 31 15z" style="fill:#edebf2" />
+                    </g>
+                </svg>
             </div>
             <div class="custom-div-1">
                 <p class="custom-p-1">Sorry but this feature is unavailable at the moments.</p>
@@ -779,9 +912,9 @@ class Notification {
 
 
 
-    </div> 
     </div>
-      <!-- main container ends here -->
+    </div>
+    <!-- main container ends here -->
 
 
 
@@ -789,21 +922,25 @@ class Notification {
 
 
 
-      <!-- Second main container start here -->
-       <div class="main-container1">
-           <div class="main-container-3">
-               <div class="main-container-div-2">
-                   <h2>Friends</h2>
-                   <i class="fa-solid fa-magnifying-glass"></i>
+    <!-- Second main container start here -->
+    <div class="main-container1">
+        <div class="main-container-3">
+            <div class="main-container-div-2">
+                <h2>Friends</h2>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="main-container-div-3">
+                <div class="friend-btn-1">
+                    <p>Friend Request</p>
                 </div>
-                <div class="main-container-div-3">
-                    <div class="friend-btn-1"><p>Friend Request</p></div>
-                    <div class="friend-btn-2"><p>Your friends</p></div>
+                <div class="friend-btn-2">
+                    <p>Your friends</p>
                 </div>
-                <div class="main-container-notification-1"></div>
+            </div>
+            <div class="main-container-notification-1"></div>
 
-                <!-- friend suggestion start here -->
-                 <?php 
+            <!-- friend suggestion start here -->
+            <?php 
                  if($users_available_2) {
                     if($users_location_row_2 == 1) {
                         echo "
@@ -951,7 +1088,7 @@ class Notification {
                     </div>";
                  }
                  ?>
-          
+
 
             <!-- friend suggestion ends here -->
 
@@ -966,7 +1103,7 @@ class Notification {
             <div class="second-friend-request-div hidden">
                 <div class="friend-row-div">
 
-            <?php 
+                    <?php 
             if($friend_request_1) {
                 while($friend_request_data_1 = mysqli_fetch_assoc($friend_request_result_1)) {
                     $friend_request_username = $friend_request_data_1["request_username"];
@@ -1051,7 +1188,7 @@ class Notification {
                     </div>";
             }
             ?>
-                    
+
                 </div>
             </div>
 
@@ -1072,7 +1209,9 @@ class Notification {
                     </form>
                 </div>
                 <div class="all-friend-list-div">
-                    <div class="number-of-friend-div"><p><?php echo $select_all_friend_row_1; ?></p></div>
+                    <div class="number-of-friend-div">
+                        <p><?php echo $select_all_friend_row_1; ?></p>
+                    </div>
                     <?php 
                     if($all_friends_1) {
                         while($all_friends_data_1 = mysqli_fetch_assoc($select_all_friend_result_1)) {
@@ -1130,21 +1269,24 @@ class Notification {
 
 
         </div>
-       </div>
-       <!-- Second main container ends here -->
-        <!-- modal start here -->
-        <div class="modal-div-1 hidden">
-      <div class="notification-div">
+    </div>
+    <!-- Second main container ends here -->
+    <!-- modal start here -->
+    <div class="modal-div-1 hidden">
+        <div class="notification-div">
             <div class="notification-div-3">
                 <h3>Notifications</h3>
                 <i class="fa-solid fa-circle-xmark cancel-notification"></i>
             </div>
-        <div class="notification-div-1">
-            <button class="notification-btn notification-see-all-btn">See All</button>
-            <div class="notification-btn1">Personal <div class="notification-num-1 <?php if(!$personal_number) { echo 'hidden'; } ?>" > <?php echo $personal_number; ?></div></div>
-        </div>
+            <div class="notification-div-1">
+                <button class="notification-btn notification-see-all-btn">See All</button>
+                <div class="notification-btn1">Personal <div
+                        class="notification-num-1 <?php if(!$personal_number) { echo 'hidden'; } ?>">
+                        <?php echo $personal_number; ?></div>
+                </div>
+            </div>
 
-        <?php
+            <?php
         $no_notification_true = 0;
         $i = 0;
         $ii = 0;
@@ -1251,23 +1393,24 @@ class Notification {
           }
         } else { if ($i > 1) {$no_notification_true = 2;}
           ?>
-          <div class='notification-div2 <?php if ($no_notification_true >= 1) { echo "hidden"; }; ?> '>
-          <div class='notification-div-2'>
-                   <div class='notification-div-img'>
-                   <img src='./user_profile_images/secretbook-high-resolution-logo-transparent.png' alt='pics' class='notification-img'>
-                   <div class='notification-icon-div'></div>
-                   </div>
-                   <div class='notification-div-4'>
-                   <p>Welcome to SecretBook! Tap here to find people you know and add them as friends</p>
-                   <p>12.2020.23</p>
-                   </div>
-                   </div>
-                   <div class='notification-recent'>
-                   <div class='update-div'></div>
-                   </div>
-                   </div>
+            <div class='notification-div2 <?php if ($no_notification_true >= 1) { echo "hidden"; }; ?> '>
+                <div class='notification-div-2'>
+                    <div class='notification-div-img'>
+                        <img src='./user_profile_images/secretbook-high-resolution-logo-transparent.png' alt='pics'
+                            class='notification-img'>
+                        <div class='notification-icon-div'></div>
+                    </div>
+                    <div class='notification-div-4'>
+                        <p>Welcome to SecretBook! Tap here to find people you know and add them as friends</p>
+                        <p>12.2020.23</p>
+                    </div>
+                </div>
+                <div class='notification-recent'>
+                    <div class='update-div'></div>
+                </div>
+            </div>
 
-                   <?php
+            <?php
 
               }
 
@@ -1292,12 +1435,12 @@ class Notification {
         ?>
 
 
-     </div>
-     <div class="notification-personal-div hidden">
-      <div class="personal-div-nav">
-      <i class="fa-solid fa-arrow-left personal-back-btn"></i>
-      </div>
-      <?php 
+        </div>
+        <div class="notification-personal-div hidden">
+            <div class="personal-div-nav">
+                <i class="fa-solid fa-arrow-left personal-back-btn"></i>
+            </div>
+            <?php 
       $p = 0;
       $pp = 0;
       $ppp = 0;
@@ -1376,7 +1519,7 @@ class Notification {
         // echo $personal_notification_count;
         rsort($personal_notification_1);
         if($personal_notification_count >= 1) {
-          while($pp < 3) {
+          while($pp < count($personal_notification_1) && $pp < 3) {
             $pttyh = $personal_notification_1[$pp];
                 $notification_username_25 = $personal_notification[$pttyh]["username"];
                 $notification_type_1_25 = $personal_notification[$pttyh]["type"];
@@ -1413,7 +1556,7 @@ class Notification {
                           echo "  
                     </div>
                   <div class='notification-div-4'>"; ?>
-                  <?php 
+            <?php 
                   if($notification_type_1_25 == "post comment") {
                     echo "<p>$notification_username_25 commented on your <b>post</b></p>";
                   } elseif($notification_type_1_25 == "story comment") {
@@ -1439,22 +1582,23 @@ class Notification {
           }
       } else { if($ppp > 1) {$no_personal_true = 2;};
       ?>
-      <div class='notification-div2 <?php if ($no_personal_true >= 1) {echo "hidden"; }; ?>'>
-          <div class='notification-div-2'>
-            <div class='notification-div-img'>
-              <img src='./user_profile_images/secretbook-high-resolution-logo-transparent.png' alt='pics' class='notification-img'>
-              <div class='notification-icon-div'></div>
+            <div class='notification-div2 <?php if ($no_personal_true >= 1) {echo "hidden"; }; ?>'>
+                <div class='notification-div-2'>
+                    <div class='notification-div-img'>
+                        <img src='./user_profile_images/secretbook-high-resolution-logo-transparent.png' alt='pics'
+                            class='notification-img'>
+                        <div class='notification-icon-div'></div>
+                    </div>
+                    <div class='notification-div-4'>
+                        <p>Welcome to SecretBook! Tap here to find people you know and add them as friends</p>
+                        <p>12.2020.23</p>
+                    </div>
+                </div>
+                <div class='notification-recent'>
+                    <div class='update-div'></div>
+                </div>
             </div>
-            <div class='notification-div-4'>
-              <p>Welcome to SecretBook! Tap here to find people you know and add them as friends</p>
-              <p>12.2020.23</p>
-            </div>
-            </div>
-            <div class='notification-recent'>
-              <div class='update-div'></div>
-            </div>
-       </div>
-       <?php }
+            <?php }
       } else {
         echo "
         <div class='notification-div2'>
@@ -1475,30 +1619,30 @@ class Notification {
       }
        ?>
 
-     </div>
-  </div>
-
-
-  <div id="popup1" class="overlay">
-      <div class="popup">
-        <h2>SecretBook</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          Thanks for using SecretBook, the feature you're currently looking for
-          is not available at the moment. Try again Later..!!!
         </div>
-      </div>
+    </div>
+
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>SecretBook</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                Thanks for using SecretBook, the feature you're currently looking for
+                is not available at the moment. Try again Later..!!!
+            </div>
+        </div>
     </div>
 
     <div class="modal-div-11 hidden">
-      <div class="search-div-1">
-        <div class="search-div-nav">
-          <p>Recent</p>
-          <!-- <p>...</p> -->
-          <i class="fa-solid fa-xmark search-cancel-x"></i>
-        </div>
-        <div class="search-result-div">
-          <?php 
+        <div class="search-div-1">
+            <div class="search-div-nav">
+                <p>Recent</p>
+                <!-- <p>...</p> -->
+                <i class="fa-solid fa-xmark search-cancel-x"></i>
+            </div>
+            <div class="search-result-div">
+                <?php 
             $limit = 3;
             $select_recent_query_1 = "select * from `search_recent_table` where user_unique_id = $user_unique_id and username = '$detail_username' limit $limit";
             $recent_result_1 = mysqli_query($con, $select_recent_query_1);
@@ -1529,9 +1673,9 @@ class Notification {
             }
           
           ?>
-        </div>
-        <div class="see-all-search">
-          <?php 
+            </div>
+            <div class="see-all-search">
+                <?php 
           $select_see_recent = "select * from `search_recent_table` where user_unique_id = $user_unique_id and username = '$detail_username'";
           $see_recent_result = mysqli_query($con, $select_see_recent);
           $see_recent_num = mysqli_num_rows($see_recent_result);
@@ -1539,23 +1683,23 @@ class Notification {
             echo "<p class='search-see-all-p'>See all</p>";
           }
           ?>
-        </div>  
-      </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal-div-12 hidden">
-      <div class="search-recent-div">
-        <div class="search-recent-nav-div">
-          <h2>Search Result</h2>
-          <div class="remove-recent-div">
-            <i class="fa-solid fa-xmark search-see-all-x"></i>
-          </div>
-        </div>
-        <div class="search-recent-div-1">
-          
+        <div class="search-recent-div">
+            <div class="search-recent-nav-div">
+                <h2>Search Result</h2>
+                <div class="remove-recent-div">
+                    <i class="fa-solid fa-xmark search-see-all-x"></i>
+                </div>
+            </div>
+            <div class="search-recent-div-1">
 
 
-          <?php 
+
+                <?php 
 
             $select_recent_query_2 = "select * from `search_recent_table` where user_unique_id = $user_unique_id and username = '$detail_username'";
             $recent_result_2 = mysqli_query($con, $select_recent_query_2);
@@ -1604,43 +1748,47 @@ class Notification {
           
 
           ?>
-        
 
 
+
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="modal-div-13 hidden">
 
-<div class="message-inbox-div">
+        <div class="message-inbox-div">
 
-  <div class="message-nav-div">
-     <h2>Chats</h2>
-    <div class="new-chat-div">
-      <i class="fa-solid fa-pen-to-square new-message-i"></i>
-      <i class="fa-solid fa-xmark close-message-x"></i>
+            <div class="message-nav-div">
+                <h2>Chats</h2>
+                <div class="new-chat-div">
+                    <i class="fa-solid fa-pen-to-square new-message-i"></i>
+                    <i class="fa-solid fa-xmark close-message-x"></i>
+                </div>
+            </div>
+            <div class="message-input-div">
+                <input type="text" name="message-inbox-input" class="message-search-input"
+                    placeholder="Search Messenger" readonly>
+            </div>
+            <div class="message-category-div">
+                <p>Inbox</p>
+            </div>
+
+            <div class="message-users-div">
+
+
+            </div>
+        </div>
+
+
     </div>
-  </div>
-  <div class="message-input-div">
-    <input type="text" name="message-inbox-input" class="message-search-input" placeholder="Search Messenger" readonly>
-  </div>
-  <div class="message-category-div"><p>Inbox</p></div>
-
-  <div class="message-users-div">
-
-    
-  </div>
-</div>
 
 
-</div>
+    <!-- modal ends here -->
 
-
-        <!-- modal ends here -->
-
-       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
+
 </html>
 
 <?php

@@ -155,7 +155,7 @@ class Notification {
 }
  
 
- ?> 
+ ?>
 
 
 <!DOCTYPE html>
@@ -178,21 +178,24 @@ class Notification {
         rel="stylesheet">
     <!-- ends here -->
     <!-- link css start here -->
-     <link rel="stylesheet" href="friend_profile.css">
-     <script defer src="friend_profile1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="friend_profile.css">
+    <script defer src="friend_profile1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
 
     </style>
-    
+
 </head>
+
 <body>
-  
+
     <div class="navigation-div">
         <div class="navigation-div-1">
             <div class="nav-flex1">
-                <img src="../user_profile_folder/user_profile_images/secretbook-high-resolution-logo-transparent.png" alt="pics"
-                    class="nav-img">
+                <img src="../user_profile_folder/user_profile_images/secretbook-high-resolution-logo-transparent.png"
+                    alt="pics" class="nav-img">
                 <!-- <input type="text" placeholder="Search SecretBook" name="Search_input" class="search-input"> -->
                 <!-- <i class="fa-solid fa-magnifying-glass nav-div search-icon"></i> -->
             </div>
@@ -200,8 +203,10 @@ class Notification {
         <div class="navigation-div-2">
             <div class="div-nav">
                 <nav class="nav">
-                    <li><a href="../user_home_folder/user_home.php" target="_self"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a href="../friends_folder/friends.php" target="_self"><i class="fa-solid fa-user-group"></i></a></li>
+                    <li><a href="../user_home_folder/user_home.php" target="_self"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li><a href="../friends_folder/friends.php" target="_self"><i
+                                class="fa-solid fa-user-group"></i></a></li>
                     <li><a href="#popup1"><i class="fa-solid fa-users-line"></i></a></li>
                 </nav>
             </div>
@@ -214,16 +219,23 @@ class Notification {
                     </div>
                     <div class="nav-div table-cells-icon"><i class="fa-solid fa-table-cells"></i></div>
                     <div class="nav-div hidden"><i class="fa-solid fa-message"></i></div>
-                    <div class="nav-div notification-div-bell"><i class="fa-solid fa-bell notification-bell"></i> <div class="notification-num <?php if(!$notification_number) { echo 'hidden'; } ?>" > <?php echo $notification_number; ?></div></div>
-                    <div class="nav-div notification-div-bell-1"><i class="fa-solid fa-bell notification-bell-1"></i> <div class="notification-num <?php if(!$notification_number) { echo 'hidden'; } ?>" > <?php echo $notification_number; ?></div> </div>
-                    <div class="nav-div1"><img src="../sign_up_folder/user_image/<?php echo $friend_picture ?>" alt="pics" class="nav-img1"></div>
+                    <div class="nav-div notification-div-bell"><i class="fa-solid fa-bell notification-bell"></i>
+                        <div class="notification-num <?php if(!$notification_number) { echo 'hidden'; } ?>">
+                            <?php echo $notification_number; ?></div>
+                    </div>
+                    <div class="nav-div notification-div-bell-1"><i class="fa-solid fa-bell notification-bell-1"></i>
+                        <div class="notification-num <?php if(!$notification_number) { echo 'hidden'; } ?>">
+                            <?php echo $notification_number; ?></div>
+                    </div>
+                    <div class="nav-div1"><img src="../sign_up_folder/user_image/<?php echo $friend_picture ?>"
+                            alt="pics" class="nav-img1"></div>
                 </div>
             </div>
         </div>
     </div>
     <!-- navigation ends here -->
-      <!-- header start here -->
-      <div class="header-container">
+    <!-- header start here -->
+    <div class="header-container">
         <div class="header-img-div">
             <img src="../sign_up_folder/user_image/<?php echo $friend_picture ?>" alt="photo" class="header-img1">
         </div>
@@ -232,10 +244,10 @@ class Notification {
                 <div class="header-img-div-2">
                     <img src="../sign_up_folder/user_image/<?php echo $friend_picture ?>" alt="pic" class="header-img2">
                 </div>
-              <h1><?php echo $friend_username_num_1; ?></h1>
+                <h1><?php echo $friend_username_num_1; ?></h1>
             </div>
             <div class="header-div1">
-              <?php 
+                <?php 
               if($check_if_user_is_friend_num >= 1) {
                 echo "<button class='header-btn2'><i class='fa-solid fa-user'></i> Friends</button>";
               }elseif($already_sent_request_out_row >= 1) {
@@ -244,17 +256,19 @@ class Notification {
                 echo "<button class='header-btn1 add_friend_btn_1' data-friend-username='$friend_username_num_1'><i class='fa-solid fa-user'></i> Add friend</button>"; 
               }
               ?>
-                <button class="header-btn1 header-btn5 cancel-friend-request-btn hidden" <?php echo " data-request-id-1='$friend_id' data-request-id-2='$user_unique_id' ";?>><i class="fa-solid fa-user"></i> Cancel request</button>
+                <button class="header-btn1 header-btn5 cancel-friend-request-btn hidden"
+                    <?php echo " data-request-id-1='$friend_id' data-request-id-2='$user_unique_id' ";?>><i
+                        class="fa-solid fa-user"></i> Cancel request</button>
                 <button class="header-btn2"><i class="fa-solid fa-comments"></i> Message</button>
             </div>
         </div>
         <div class="line-up">
             <nav class="line-up-nav">
-              <li class="li-1"><a href="friend_profile1.php">Post</a></li>
-              <li class="li-2"><a href="friend_profile1.php?user_about_view">About</a></li>
-              <li class="li-3"><a href="friend_profile1.php?user_friends_view">Friends</a></li>
-              <li class="li-4"><a href="friend_profile1.php?user_photos_view">Photos</a></li>
-              <li class="li-5"><a href="friend_profile1.php?user_videos_view">Videos</a></li>
+                <li class="li-1"><a href="friend_profile1.php">Post</a></li>
+                <li class="li-2"><a href="friend_profile1.php?user_about_view">About</a></li>
+                <li class="li-3"><a href="friend_profile1.php?user_friends_view">Friends</a></li>
+                <li class="li-4"><a href="friend_profile1.php?user_photos_view">Photos</a></li>
+                <li class="li-5"><a href="friend_profile1.php?user_videos_view">Videos</a></li>
             </nav>
             <div class="header-menu">
                 <p>...</p>
@@ -263,7 +277,7 @@ class Notification {
     </div>
     <!-- header ends here -->
     <!-- body start here -->
-    
+
     <div class="body-container">
         <div class="body-container-div">
             <div class="body-div1">
@@ -273,7 +287,7 @@ class Notification {
                         <p class="p-bio"><?php echo $_SESSION["friend_bio"]; ?></p>
                     </div>
                 </div>
-              
+
                 <div class="body-intro-div2">
                     <h3>Photos</h3>
                     <a href="#">See All Photos</a>
@@ -284,13 +298,14 @@ class Notification {
                 </div>
             </div>
             <div class="body-div2">
-              
-            
+
+
                 <div class="born-div">
                     <div class="born-div-1">
                         <div class="born-div-2">
                             <div class="born-div-span">
-                                <img src="../sign_up_folder/user_image/<?php echo $friend_picture ?>" alt="pics" class="born-img1">
+                                <img src="../sign_up_folder/user_image/<?php echo $friend_picture ?>" alt="pics"
+                                    class="born-img1">
                                 <span class="born-name">
                                     <?php echo $friend_username_num_1; ?>
                                 </span>
@@ -303,7 +318,7 @@ class Notification {
                             <i class="fa-solid fa-cake-candles"></i>
                             <p>
                                 <?php echo $friend_age; ?>
-                        </p>
+                            </p>
                         </div>
                         <div class="caption-div">
                             <span class="like-count">0</span>
@@ -315,20 +330,22 @@ class Notification {
                                 <i class="fa-regular fa-comment comment-icon"></i>
                             </div>
                             <p class="born-div-p">comment</p>
-                            
+
                             <div class='born-form-div-1'>
-                              <div class='born-form-div-2'>
-                               <img src='../sign_up_folder/user_image/<>' alt='photo' />
-                              </div>
-                             <form action='' method='post' class='born-form-div-3'>
-                              <input type='text' name='post-input' placeholder='Write a public comment...' class='born-div-input-1' autocomplete='off'/>
-                              <input type='submit' name='post-comment-submit' value='&#8594;' class='post-comment-btn' />
-                             </form>
+                                <div class='born-form-div-2'>
+                                    <img src='../sign_up_folder/user_image/<>' alt='photo' />
+                                </div>
+                                <form action='' method='post' class='born-form-div-3'>
+                                    <input type='text' name='post-input' placeholder='Write a public comment...'
+                                        class='born-div-input-1' autocomplete='off' />
+                                    <input type='submit' name='post-comment-submit' value='&#8594;'
+                                        class='post-comment-btn' />
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-     
+
 
 
 
@@ -522,7 +539,7 @@ if($post_exist) {
 
 
 ?>
-<!-- Testing Ends -->
+                <!-- Testing Ends -->
             </div>
         </div>
     </div>
@@ -552,21 +569,24 @@ if($post_exist) {
       </script>";
      }
      ?>
-     
 
-     <!-- Modal start here -->
-     <div class="modal-div-1 hidden">
-      <div class="notification-div">
+
+    <!-- Modal start here -->
+    <div class="modal-div-1 hidden">
+        <div class="notification-div">
             <div class="notification-div-3">
                 <h3>Notifications</h3>
                 <i class="fa-solid fa-circle-xmark cancel-notification"></i>
             </div>
-        <div class="notification-div-1">
-            <button class="notification-btn notification-see-all-btn">See All</button>
-            <div class="notification-btn1">Personal <div class="notification-num-1 <?php if(!$personal_number) { echo 'hidden'; } ?>" > <?php echo $personal_number; ?></div></div>
-        </div>
+            <div class="notification-div-1">
+                <button class="notification-btn notification-see-all-btn">See All</button>
+                <div class="notification-btn1">Personal <div
+                        class="notification-num-1 <?php if(!$personal_number) { echo 'hidden'; } ?>">
+                        <?php echo $personal_number; ?></div>
+                </div>
+            </div>
 
-        <?php
+            <?php
         $no_notification_true = 0;
         $i = 0;
         $ii = 0;
@@ -673,23 +693,24 @@ if($post_exist) {
           }
         } else { if ($i > 1) {$no_notification_true = 2;}
           ?>
-          <div class='notification-div2 <?php if ($no_notification_true >= 1) { echo "hidden"; }; ?> '>
-          <div class='notification-div-2'>
-                   <div class='notification-div-img'>
-                   <img src='./user_profile_images/secretbook-high-resolution-logo-transparent.png' alt='pics' class='notification-img'>
-                   <div class='notification-icon-div'></div>
-                   </div>
-                   <div class='notification-div-4'>
-                   <p>Welcome to SecretBook! Tap here to find people you know and add them as friends</p>
-                   <p>12.2020.23</p>
-                   </div>
-                   </div>
-                   <div class='notification-recent'>
-                   <div class='update-div'></div>
-                   </div>
-                   </div>
+            <div class='notification-div2 <?php if ($no_notification_true >= 1) { echo "hidden"; }; ?> '>
+                <div class='notification-div-2'>
+                    <div class='notification-div-img'>
+                        <img src='./user_profile_images/secretbook-high-resolution-logo-transparent.png' alt='pics'
+                            class='notification-img'>
+                        <div class='notification-icon-div'></div>
+                    </div>
+                    <div class='notification-div-4'>
+                        <p>Welcome to SecretBook! Tap here to find people you know and add them as friends</p>
+                        <p>12.2020.23</p>
+                    </div>
+                </div>
+                <div class='notification-recent'>
+                    <div class='update-div'></div>
+                </div>
+            </div>
 
-                   <?php
+            <?php
 
               }
 
@@ -714,12 +735,12 @@ if($post_exist) {
         ?>
 
 
-     </div>
-     <div class="notification-personal-div hidden">
-      <div class="personal-div-nav">
-      <i class="fa-solid fa-arrow-left personal-back-btn"></i>
-      </div>
-      <?php 
+        </div>
+        <div class="notification-personal-div hidden">
+            <div class="personal-div-nav">
+                <i class="fa-solid fa-arrow-left personal-back-btn"></i>
+            </div>
+            <?php 
       $p = 0;
       $pp = 0;
       $ppp = 0;
@@ -798,7 +819,7 @@ if($post_exist) {
         // echo $personal_notification_count;
         rsort($personal_notification_1);
         if($personal_notification_count >= 1) {
-          while($pp < 3) {
+          while($pp < count($personal_notification_1) && $pp < 3) {
             $pttyh = $personal_notification_1[$pp];
                 $notification_username_25 = $personal_notification[$pttyh]["username"];
                 $notification_type_1_25 = $personal_notification[$pttyh]["type"];
@@ -835,7 +856,7 @@ if($post_exist) {
                           echo "  
                     </div>
                   <div class='notification-div-4'>"; ?>
-                  <?php 
+            <?php 
                   if($notification_type_1_25 == "post comment") {
                     echo "<p>$notification_username_25 commented on your <b>post</b></p>";
                   } elseif($notification_type_1_25 == "story comment") {
@@ -861,22 +882,23 @@ if($post_exist) {
           }
       } else { if($ppp > 1) {$no_personal_true = 2;};
       ?>
-      <div class='notification-div2 <?php if ($no_personal_true >= 1) {echo "hidden"; }; ?>'>
-          <div class='notification-div-2'>
-            <div class='notification-div-img'>
-              <img src='./user_profile_images/secretbook-high-resolution-logo-transparent.png' alt='pics' class='notification-img'>
-              <div class='notification-icon-div'></div>
+            <div class='notification-div2 <?php if ($no_personal_true >= 1) {echo "hidden"; }; ?>'>
+                <div class='notification-div-2'>
+                    <div class='notification-div-img'>
+                        <img src='./user_profile_images/secretbook-high-resolution-logo-transparent.png' alt='pics'
+                            class='notification-img'>
+                        <div class='notification-icon-div'></div>
+                    </div>
+                    <div class='notification-div-4'>
+                        <p>Welcome to SecretBook! Tap here to find people you know and add them as friends</p>
+                        <p>12.2020.23</p>
+                    </div>
+                </div>
+                <div class='notification-recent'>
+                    <div class='update-div'></div>
+                </div>
             </div>
-            <div class='notification-div-4'>
-              <p>Welcome to SecretBook! Tap here to find people you know and add them as friends</p>
-              <p>12.2020.23</p>
-            </div>
-            </div>
-            <div class='notification-recent'>
-              <div class='update-div'></div>
-            </div>
-       </div>
-       <?php }
+            <?php }
       } else {
         echo "
         <div class='notification-div2'>
@@ -897,72 +919,74 @@ if($post_exist) {
       }
        ?>
 
-     </div>
-  </div>
-  
-  <div class="modal-div-2 hidden">
-    <div class="pop-up-div">
-        <img src="../sign_up_folder/user_image/<?php echo $friend_picture ?>" alt="pics" class="pop-up-img">
+        </div>
     </div>
-  </div>
-  
-  <div class="modal-div-3 hidden">
-      <div class="search-div">
-        <form action="" method="post" class="search-form">
-            <i class="fa-solid fa-circle-xmark form-cancel"></i>
-            <input type="text" placeholder="Search SecretBook" name="search-input-1" class="search-input-1">
-            <input type="submit" value="Search" name="search-btn" class="search-btn">
-        </form>
-    </div>
-</div>
 
-<div class="modal-div-4 hidden">
-    <div class="comment-div__1">
-        <i class="fa-solid fa-circle-xmark comment-cancel"></i>
-        <div class="comment-div-1">
-            <div class="comment-div-pics">
-                <img src="" alt="" class="comment-profile-pics">
+    <div class="modal-div-2 hidden">
+        <div class="pop-up-div">
+            <img src="../sign_up_folder/user_image/<?php echo $friend_picture ?>" alt="pics" class="pop-up-img">
+        </div>
+    </div>
+
+    <div class="modal-div-3 hidden">
+        <div class="search-div">
+            <form action="" method="post" class="search-form">
+                <i class="fa-solid fa-circle-xmark form-cancel"></i>
+                <input type="text" placeholder="Search SecretBook" name="search-input-1" class="search-input-1">
+                <input type="submit" value="Search" name="search-btn" class="search-btn">
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-div-4 hidden">
+        <div class="comment-div__1">
+            <i class="fa-solid fa-circle-xmark comment-cancel"></i>
+            <div class="comment-div-1">
+                <div class="comment-div-pics">
+                    <img src="" alt="" class="comment-profile-pics">
+                </div>
+                <div class="comment-div-2">
+                    <p>this is my comment</p>
+                </div>
             </div>
-            <div class="comment-div-2">
-                <p>this is my comment</p>
+        </div>
+    </div>
+
+    <div class="modal-div-5 hidden">
+        <div class="comment-div">
+            <div class="comment-owner-div">
+                <i class="fa-solid fa-circle-xmark more-cancel"></i>
+            </div>
+            <div class="comment-container-div">
+                <div class='comment-owner-div-1'>
+                    <p class='comment-owner'>SECRET-BOOK</p>
+                </div>
             </div>
         </div>
     </div>
-  </div>
-  
-<div class="modal-div-5 hidden">
-    <div class="comment-div">
-        <div class="comment-owner-div">  
-          <i class="fa-solid fa-circle-xmark more-cancel"></i>
-        </div>
-        <div class="comment-container-div">
-            <div class='comment-owner-div-1'><p class='comment-owner'>SECRET-BOOK</p></div>
+
+    <div class="modal-div-6 hidden">
+        <div class="shortcut-div">
+            <li><a href="../index.php"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user-group"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-users-line"></i></a></li>
         </div>
     </div>
-</div>
 
-<div class="modal-div-6 hidden">
-    <div class="shortcut-div">
-        <li><a href="../index.php"><i class="fa-solid fa-house"></i></a></li>
-        <li><a href="#"><i class="fa-solid fa-user-group"></i></a></li>
-        <li><a href="#"><i class="fa-solid fa-users-line"></i></a></li>
-    </div>
-  </div>
-
-  <div id="popup1" class="overlay">
-      <div class="popup">
-        <h2>SecretBook</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          Thanks for using SecretBook, the feature you're currently looking for
-          is not available at the moment. Try again Later..!!!
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>SecretBook</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                Thanks for using SecretBook, the feature you're currently looking for
+                is not available at the moment. Try again Later..!!!
+            </div>
         </div>
-      </div>
     </div>
 
-  
-  <!-- Modal ends here -->
-  <iframe name="the-iframe" class="the-iframe-class"></iframe>
+
+    <!-- Modal ends here -->
+    <iframe name="the-iframe" class="the-iframe-class"></iframe>
 
 
 
@@ -970,6 +994,7 @@ if($post_exist) {
 
 
 </body>
+
 </html>
 
 <?php 
